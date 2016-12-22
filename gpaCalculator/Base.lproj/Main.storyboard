@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXY-tH-4MW">
+                                <rect key="frame" x="0.0" y="79" width="375" height="588"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many classes are you in?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-vv-PIw">
+                                        <rect key="frame" x="8" y="37" width="359" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="NqY-qj-8TC"/>
+                                            <constraint firstAttribute="width" constant="359" id="OvX-Pc-b5q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDT-WL-VI9">
+                                        <rect key="frame" x="0.0" y="95" width="375" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="UdU-LL-VXi"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="XNb-4b-8dS"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.73617403815450322" green="0.83853766678199515" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yHd-vv-PIw" firstAttribute="leading" secondItem="mXY-tH-4MW" secondAttribute="leading" constant="8" id="3tc-xI-i8k"/>
+                                    <constraint firstItem="DDT-WL-VI9" firstAttribute="top" secondItem="yHd-vv-PIw" secondAttribute="bottom" constant="37" id="6FC-sO-oAY"/>
+                                    <constraint firstItem="yHd-vv-PIw" firstAttribute="top" secondItem="mXY-tH-4MW" secondAttribute="top" constant="37" id="JPx-wC-Ukw"/>
+                                    <constraint firstAttribute="trailing" secondItem="DDT-WL-VI9" secondAttribute="trailing" id="M6c-pl-FeD"/>
+                                    <constraint firstAttribute="trailing" secondItem="yHd-vv-PIw" secondAttribute="trailing" constant="8" id="NQt-Of-xWT"/>
+                                    <constraint firstItem="DDT-WL-VI9" firstAttribute="leading" secondItem="mXY-tH-4MW" secondAttribute="leading" id="Yzl-sf-XBU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-j1-xpx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-0O-gKF">
+                                        <rect key="frame" x="94" y="27" width="187" height="25"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2326510353886066" green="0.38265267833322891" blue="0.72728365384615379" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9lj-0O-gKF" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="top" constant="27" id="3uy-YF-69q"/>
+                                    <constraint firstItem="9lj-0O-gKF" firstAttribute="leading" secondItem="zQM-j1-xpx" secondAttribute="leading" constant="94" id="UjD-QA-x0k"/>
+                                    <constraint firstAttribute="trailing" secondItem="9lj-0O-gKF" secondAttribute="trailing" constant="94" id="jrl-eX-qF1"/>
+                                    <constraint firstAttribute="bottom" secondItem="9lj-0O-gKF" secondAttribute="bottom" constant="27" id="uL8-n2-cAr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mXY-tH-4MW" secondAttribute="bottom" id="9Md-Io-zY3"/>
+                            <constraint firstItem="mXY-tH-4MW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FsX-Wa-0OE"/>
+                            <constraint firstItem="mXY-tH-4MW" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="bottom" id="Fx9-iU-gxi"/>
+                            <constraint firstAttribute="trailing" secondItem="zQM-j1-xpx" secondAttribute="trailing" id="TE0-vk-35p"/>
+                            <constraint firstAttribute="trailing" secondItem="mXY-tH-4MW" secondAttribute="trailing" id="b78-Wz-3tD"/>
+                            <constraint firstItem="zQM-j1-xpx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="be9-hj-jXA"/>
+                            <constraint firstItem="zQM-j1-xpx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qZE-55-PtT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numClassesPicker" destination="DDT-WL-VI9" id="aeb-P3-S4v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>
