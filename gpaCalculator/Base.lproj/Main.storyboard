@@ -34,22 +34,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDT-WL-VI9">
-                                        <rect key="frame" x="0.0" y="95" width="375" height="216"/>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA9-pP-UXV">
+                                        <rect key="frame" x="0.0" y="95" width="375" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="84" id="iHG-Ir-Tg0"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="UdU-LL-VXi"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="XNb-4b-8dS"/>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="uQb-gG-gLH"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="pHA-hM-f75"/>
                                         </connections>
                                     </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.73617403815450322" green="0.83853766678199515" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="yHd-vv-PIw" firstAttribute="leading" secondItem="mXY-tH-4MW" secondAttribute="leading" constant="8" id="3tc-xI-i8k"/>
-                                    <constraint firstItem="DDT-WL-VI9" firstAttribute="top" secondItem="yHd-vv-PIw" secondAttribute="bottom" constant="37" id="6FC-sO-oAY"/>
+                                    <constraint firstItem="wA9-pP-UXV" firstAttribute="top" secondItem="yHd-vv-PIw" secondAttribute="bottom" constant="37" id="BTk-xu-nkD"/>
                                     <constraint firstItem="yHd-vv-PIw" firstAttribute="top" secondItem="mXY-tH-4MW" secondAttribute="top" constant="37" id="JPx-wC-Ukw"/>
-                                    <constraint firstAttribute="trailing" secondItem="DDT-WL-VI9" secondAttribute="trailing" id="M6c-pl-FeD"/>
+                                    <constraint firstItem="wA9-pP-UXV" firstAttribute="leading" secondItem="mXY-tH-4MW" secondAttribute="leading" id="Je2-QK-lMb"/>
                                     <constraint firstAttribute="trailing" secondItem="yHd-vv-PIw" secondAttribute="trailing" constant="8" id="NQt-Of-xWT"/>
-                                    <constraint firstItem="DDT-WL-VI9" firstAttribute="leading" secondItem="mXY-tH-4MW" secondAttribute="leading" id="Yzl-sf-XBU"/>
+                                    <constraint firstAttribute="trailing" secondItem="wA9-pP-UXV" secondAttribute="trailing" id="yDE-Bh-d5j"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-j1-xpx">
@@ -83,7 +86,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="numClassesPicker" destination="DDT-WL-VI9" id="aeb-P3-S4v"/>
+                        <outlet property="numClassesPicker" destination="wA9-pP-UXV" id="wt6-nc-bGE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

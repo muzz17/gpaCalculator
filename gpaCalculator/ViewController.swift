@@ -15,14 +15,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var numClasses = [Int]()
     var counter: Int = 0
     var counter2: Int = 1
+    var test = ["one", "two", "three"]
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         initNumClassArray()
         
         self.numClassesPicker.delegate = self
         self.numClassesPicker.dataSource = self
+        
+        super.viewDidLoad()
         
     }
     
@@ -33,12 +35,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numClasses.count
+        return test.count
     }
     
     // The data to return for the row and component (column) that's being passed in
-    private func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> Int?{
-        return numClasses[row]
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!{
+        return test[row]
     }
     
     func initNumClassArray(){
