@@ -37,9 +37,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-nN-6kC">
-                                                <rect key="frame" x="0.0" y="96" width="375" height="89"/>
+                                                <rect key="frame" x="0.0" y="69" width="375" height="88"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="89" id="eNe-bJ-7Fb"/>
+                                                    <constraint firstAttribute="height" constant="88" id="eNe-bJ-7Fb"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dOE-Rl-6B7"/>
@@ -54,7 +54,7 @@
                                             <constraint firstItem="5b0-Wg-gyK" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="GQo-fT-5vd"/>
                                             <constraint firstAttribute="trailing" secondItem="5b0-Wg-gyK" secondAttribute="trailing" constant="8" id="IOF-5P-qxI"/>
                                             <constraint firstItem="5b0-Wg-gyK" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="22" id="Pgf-Bz-rou"/>
-                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="5b0-Wg-gyK" secondAttribute="bottom" constant="8" id="XGn-Cz-Diu"/>
+                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="5b0-Wg-gyK" secondAttribute="bottom" constant="-19" id="XGn-Cz-Diu"/>
                                             <constraint firstItem="tB7-nN-6kC" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" id="vPD-fA-yBC"/>
                                         </constraints>
                                     </view>
