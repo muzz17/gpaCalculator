@@ -46,15 +46,57 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ixM-dv-fQQ"/>
                                                 </connections>
                                             </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-NC-SZm">
+                                                <rect key="frame" x="8" y="165" width="359" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="XcK-vz-tkx"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Nk-nf1">
+                                                <rect key="frame" x="8" y="203" width="178" height="74"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="Q6f-t3-38J"/>
+                                                    <constraint firstAttribute="height" constant="74" id="d66-b9-ATz"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-fp-6Zn">
+                                                <rect key="frame" x="189" y="203" width="178" height="74"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="178" id="Rvg-za-NBI"/>
+                                                    <constraint firstAttribute="height" constant="74" id="lsy-tz-hM9"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90g-hh-pFf">
+                                                <rect key="frame" x="134" y="449" width="106" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="YjD-1C-qip"/>
+                                                    <constraint firstAttribute="width" constant="106" id="hfM-iT-ZIH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.73617403820000005" green="0.83853766679999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="pLi-NC-SZm" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="26i-4h-es4"/>
+                                            <constraint firstItem="mfG-Nk-nf1" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="4Cm-zh-KcW"/>
                                             <constraint firstAttribute="trailing" secondItem="tB7-nN-6kC" secondAttribute="trailing" id="7Fl-cl-NZQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="pLi-NC-SZm" secondAttribute="trailing" constant="8" id="8IU-hG-26U"/>
                                             <constraint firstAttribute="height" constant="921" id="DFC-jq-her"/>
                                             <constraint firstItem="5b0-Wg-gyK" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="GQo-fT-5vd"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ayw-fp-6Zn" secondAttribute="trailing" constant="8" id="Go7-gt-FaB"/>
                                             <constraint firstAttribute="trailing" secondItem="5b0-Wg-gyK" secondAttribute="trailing" constant="8" id="IOF-5P-qxI"/>
+                                            <constraint firstItem="90g-hh-pFf" firstAttribute="centerY" secondItem="k6a-Z6-6C4" secondAttribute="centerY" id="Luv-a2-jgt"/>
+                                            <constraint firstItem="mfG-Nk-nf1" firstAttribute="top" secondItem="pLi-NC-SZm" secondAttribute="bottom" constant="8" id="N5U-4N-y2l"/>
                                             <constraint firstItem="5b0-Wg-gyK" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="22" id="Pgf-Bz-rou"/>
                                             <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="5b0-Wg-gyK" secondAttribute="bottom" constant="-19" id="XGn-Cz-Diu"/>
+                                            <constraint firstItem="90g-hh-pFf" firstAttribute="centerX" secondItem="k6a-Z6-6C4" secondAttribute="centerX" id="dxe-iQ-LBF"/>
+                                            <constraint firstItem="pLi-NC-SZm" firstAttribute="top" secondItem="tB7-nN-6kC" secondAttribute="bottom" constant="8" id="kMr-dV-BxH"/>
+                                            <constraint firstItem="Ayw-fp-6Zn" firstAttribute="top" secondItem="pLi-NC-SZm" secondAttribute="bottom" constant="8" id="mYa-AM-wNM"/>
                                             <constraint firstItem="tB7-nN-6kC" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" id="vPD-fA-yBC"/>
                                         </constraints>
                                     </view>
@@ -100,6 +142,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
+                        <outlet property="GPA" destination="90g-hh-pFf" id="HYV-5t-KZU"/>
+                        <outlet property="classOneCredits" destination="Ayw-fp-6Zn" id="EbV-4M-VeD"/>
+                        <outlet property="classOneGrade" destination="mfG-Nk-nf1" id="rWD-J1-Ich"/>
                         <outlet property="numClassesPicker" destination="tB7-nN-6kC" id="y7V-CA-B6c"/>
                     </connections>
                 </viewController>

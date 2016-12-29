@@ -302,6 +302,7 @@
 				660C14F11E0C37A70009994A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
