@@ -145,6 +145,7 @@
                         <outlet property="GPA" destination="90g-hh-pFf" id="HYV-5t-KZU"/>
                         <outlet property="classOneCredits" destination="Ayw-fp-6Zn" id="EbV-4M-VeD"/>
                         <outlet property="classOneGrade" destination="mfG-Nk-nf1" id="rWD-J1-Ich"/>
+                        <outlet property="classOneName" destination="pLi-NC-SZm" id="yR3-Yi-LMU"/>
                         <outlet property="numClassesPicker" destination="tB7-nN-6kC" id="y7V-CA-B6c"/>
                     </connections>
                 </viewController>

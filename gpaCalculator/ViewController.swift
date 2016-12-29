@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var GPA: UILabel!
     
+    @IBOutlet weak var classOneName: UITextField!
     @IBOutlet weak var classOneGrade: UIPickerView!
     @IBOutlet weak var classOneCredits: UIPickerView!
     
@@ -21,11 +22,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     var numClasses = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    let grades = ["A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F"]
-    let credits = ["0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0"]
+    let grades = ["Grade", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E/F"]
+    let credits = ["Credit Hours", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0"]
 
-    var grade1: Double = 2.0
-    var credit1: Double = 2.0
+    var grade1String: String = ""
+    var grade1: Double = 0.0
+    var credit1: Double = 0.0
     
     
 
@@ -39,9 +41,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.classOneCredits.delegate = self
         self.classOneCredits.dataSource = self
         
-        super.viewDidLoad()
+        //GPA.text = "\(grade1 * credit1)"
         
-        GPA.text = "\(grade1 * credit1)"
+        super.viewDidLoad()
         
     }
     
@@ -75,19 +77,71 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    // retrieving data from the selected row in picker view
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         if(classOneGrade == pickerView){
-            if (row == 0) {
-               grade1 = 1
-            }
-            else if (row == 1){
-                grade1 = 2
+            grade1String = grades[row]
+            convertGradeToDouble()
+            GPA.text = "\(grade1 * credit1)"
+        } else if (classOneCredits == pickerView){
+            if (row == 0){
+                credit1 = 0.0
             }
             else {
-                grade1 = 3
+                credit1 = Double(credits[row])!
             }
-        } else if (classOneCredits == pickerView){
-            credit1 = Double(credits[row])!
+            GPA.text = "\(grade1 * credit1)"
+        }
+        else if (numClassesPicker == pickerView){
+            if (row == 0){
+                classOneName.isHidden = true
+                classOneGrade.isHidden = true
+                classOneCredits.isHidden = true
+            }
+            else {
+                classOneName.isHidden = false
+                classOneGrade.isHidden = false
+                classOneCredits.isHidden = false
+            }
+        }
+    }
+    
+    func convertGradeToDouble() {
+        if (grade1String == "A"){
+            grade1 = 4.0
+        }
+        else if (grade1String == "A-"){
+            grade1 = 3.7
+        }
+        else if (grade1String == "B+"){
+            grade1 = 3.3
+        }
+        else if (grade1String == "B"){
+            grade1 = 3.0
+        }
+        else if (grade1String == "B-"){
+            grade1 = 2.7
+        }
+        else if (grade1String == "C+"){
+            grade1 = 2.3
+        }
+        else if (grade1String == "C"){
+            grade1 = 2.0
+        }
+        else if (grade1String == "C-"){
+            grade1 = 1.7
+        }
+        else if (grade1String == "D+"){
+            grade1 = 1.3
+        }
+        else if (grade1String == "D"){
+            grade1 = 1.0
+        }
+        else if (grade1String == "E/F"){
+            grade1 = 0.0
+        }
+        else {
+            grade1 = 0.0
         }
     }
     
