@@ -18,101 +18,204 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJn-eJ-6Xz">
-                                <rect key="frame" x="0.0" y="79" width="375" height="921"/>
+                                <rect key="frame" x="0.0" y="79" width="375" height="1621"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-Z6-6C4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="921"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1621"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many classes did you take this semester?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-Wg-gyK">
-                                                <rect key="frame" x="8" y="22" width="359" height="66"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="66" id="36b-8H-EJr"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="How many classes did you take this semester?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-Wg-gyK">
+                                                <rect key="frame" x="8" y="22" width="359" height="39"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-nN-6kC">
+                                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-nN-6kC">
                                                 <rect key="frame" x="0.0" y="69" width="375" height="88"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="88" id="eNe-bJ-7Fb"/>
-                                                </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dOE-Rl-6B7"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ixM-dv-fQQ"/>
                                                 </connections>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-NC-SZm">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-NC-SZm">
                                                 <rect key="frame" x="8" y="165" width="359" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="XcK-vz-tkx"/>
-                                                </constraints>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Nk-nf1">
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Nk-nf1">
                                                 <rect key="frame" x="8" y="203" width="178" height="74"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="178" id="Q6f-t3-38J"/>
-                                                    <constraint firstAttribute="height" constant="74" id="d66-b9-ATz"/>
-                                                </constraints>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </pickerView>
-                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-fp-6Zn">
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-fp-6Zn">
                                                 <rect key="frame" x="189" y="203" width="178" height="74"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="178" id="Rvg-za-NBI"/>
-                                                    <constraint firstAttribute="height" constant="74" id="lsy-tz-hM9"/>
-                                                </constraints>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </pickerView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90g-hh-pFf">
-                                                <rect key="frame" x="134" y="449" width="106" height="22"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="22" id="YjD-1C-qip"/>
-                                                    <constraint firstAttribute="width" constant="106" id="hfM-iT-ZIH"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zz-2A-TJB">
+                                                <rect key="frame" x="8" y="285" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-Z9-Tqt">
+                                                <rect key="frame" x="8" y="323" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-vL-lsK">
+                                                <rect key="frame" x="189" y="323" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZ2-XI-HdD">
+                                                <rect key="frame" x="8" y="405" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4FO-gq-Kxp">
+                                                <rect key="frame" x="8" y="443" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8r-U4-voY">
+                                                <rect key="frame" x="189" y="443" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-Th-02a">
+                                                <rect key="frame" x="8" y="525" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9V-6e-arC">
+                                                <rect key="frame" x="8" y="563" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a21-9T-DOf">
+                                                <rect key="frame" x="189" y="563" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBT-z6-g40">
+                                                <rect key="frame" x="8" y="645" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpP-t7-caR">
+                                                <rect key="frame" x="8" y="683" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-EQ-C2u">
+                                                <rect key="frame" x="189" y="683" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-0m-QML">
+                                                <rect key="frame" x="8" y="765" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CwR-dO-LaI">
+                                                <rect key="frame" x="8" y="803" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-EM-lJt">
+                                                <rect key="frame" x="8" y="885" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-Kl-E7c">
+                                                <rect key="frame" x="8" y="923" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFg-Bs-yHl">
+                                                <rect key="frame" x="189" y="923" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLj-ut-SVd">
+                                                <rect key="frame" x="8" y="1005" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4h-dg-tVl">
+                                                <rect key="frame" x="8" y="1043" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xVq-RU-vhW">
+                                                <rect key="frame" x="189" y="1043" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-BV-2KS">
+                                                <rect key="frame" x="8" y="1125" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtL-yK-ZFx">
+                                                <rect key="frame" x="8" y="1163" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBv-Uu-0CI">
+                                                <rect key="frame" x="189" y="1163" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNe-c1-GCa">
+                                                <rect key="frame" x="8" y="1245" width="359" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btF-9r-b41">
+                                                <rect key="frame" x="8" y="1283" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EpN-ew-GYF">
+                                                <rect key="frame" x="189" y="1283" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Iq-TC-Jkt">
+                                                <rect key="frame" x="189" y="803" width="178" height="74"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.73617403820000005" green="0.83853766679999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="pLi-NC-SZm" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="26i-4h-es4"/>
-                                            <constraint firstItem="mfG-Nk-nf1" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="4Cm-zh-KcW"/>
-                                            <constraint firstAttribute="trailing" secondItem="tB7-nN-6kC" secondAttribute="trailing" id="7Fl-cl-NZQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="pLi-NC-SZm" secondAttribute="trailing" constant="8" id="8IU-hG-26U"/>
-                                            <constraint firstAttribute="height" constant="921" id="DFC-jq-her"/>
-                                            <constraint firstItem="5b0-Wg-gyK" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="GQo-fT-5vd"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ayw-fp-6Zn" secondAttribute="trailing" constant="8" id="Go7-gt-FaB"/>
-                                            <constraint firstAttribute="trailing" secondItem="5b0-Wg-gyK" secondAttribute="trailing" constant="8" id="IOF-5P-qxI"/>
-                                            <constraint firstItem="90g-hh-pFf" firstAttribute="centerY" secondItem="k6a-Z6-6C4" secondAttribute="centerY" id="Luv-a2-jgt"/>
-                                            <constraint firstItem="mfG-Nk-nf1" firstAttribute="top" secondItem="pLi-NC-SZm" secondAttribute="bottom" constant="8" id="N5U-4N-y2l"/>
-                                            <constraint firstItem="5b0-Wg-gyK" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="22" id="Pgf-Bz-rou"/>
-                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="5b0-Wg-gyK" secondAttribute="bottom" constant="-19" id="XGn-Cz-Diu"/>
-                                            <constraint firstItem="90g-hh-pFf" firstAttribute="centerX" secondItem="k6a-Z6-6C4" secondAttribute="centerX" id="dxe-iQ-LBF"/>
-                                            <constraint firstItem="pLi-NC-SZm" firstAttribute="top" secondItem="tB7-nN-6kC" secondAttribute="bottom" constant="8" id="kMr-dV-BxH"/>
-                                            <constraint firstItem="Ayw-fp-6Zn" firstAttribute="top" secondItem="pLi-NC-SZm" secondAttribute="bottom" constant="8" id="mYa-AM-wNM"/>
-                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" id="vPD-fA-yBC"/>
+                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="69" id="5qD-5f-4h8"/>
+                                            <constraint firstItem="5b0-Wg-gyK" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="22" id="A8K-WK-SKI"/>
+                                            <constraint firstItem="5b0-Wg-gyK" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="Bf7-9l-nth"/>
+                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" id="OOQ-L0-zCs"/>
+                                            <constraint firstAttribute="height" constant="1621" id="kBr-rR-ZVB"/>
+                                            <constraint firstAttribute="trailing" secondItem="tB7-nN-6kC" secondAttribute="trailing" id="udG-k9-LY2"/>
+                                            <constraint firstAttribute="trailing" secondItem="5b0-Wg-gyK" secondAttribute="trailing" constant="8" id="wji-zq-RVf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="k6a-Z6-6C4" firstAttribute="top" secondItem="YJn-eJ-6Xz" secondAttribute="top" id="KMG-sd-Hbd"/>
-                                    <constraint firstAttribute="bottom" secondItem="k6a-Z6-6C4" secondAttribute="bottom" id="ZgM-k7-y2n"/>
-                                    <constraint firstAttribute="trailing" secondItem="k6a-Z6-6C4" secondAttribute="trailing" id="gvB-XK-GpI"/>
-                                    <constraint firstItem="k6a-Z6-6C4" firstAttribute="leading" secondItem="YJn-eJ-6Xz" secondAttribute="leading" id="qGp-7e-5Qs"/>
+                                    <constraint firstAttribute="trailing" secondItem="k6a-Z6-6C4" secondAttribute="trailing" id="5Ga-zo-gmG"/>
+                                    <constraint firstAttribute="bottom" secondItem="k6a-Z6-6C4" secondAttribute="bottom" id="6dt-4b-rfz"/>
+                                    <constraint firstItem="k6a-Z6-6C4" firstAttribute="leading" secondItem="YJn-eJ-6Xz" secondAttribute="leading" id="EjR-no-bOm"/>
+                                    <constraint firstItem="k6a-Z6-6C4" firstAttribute="top" secondItem="YJn-eJ-6Xz" secondAttribute="top" id="LHp-4z-Tr6"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-j1-xpx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-0O-gKF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-0O-gKF">
                                         <rect key="frame" x="94" y="27" width="187" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -120,29 +223,26 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.2326510353886066" green="0.38265267833322891" blue="0.72728365384615379" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9lj-0O-gKF" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="top" constant="27" id="3uy-YF-69q"/>
-                                    <constraint firstItem="9lj-0O-gKF" firstAttribute="leading" secondItem="zQM-j1-xpx" secondAttribute="leading" constant="94" id="UjD-QA-x0k"/>
-                                    <constraint firstAttribute="trailing" secondItem="9lj-0O-gKF" secondAttribute="trailing" constant="94" id="jrl-eX-qF1"/>
-                                    <constraint firstAttribute="bottom" secondItem="9lj-0O-gKF" secondAttribute="bottom" constant="27" id="uL8-n2-cAr"/>
+                                    <constraint firstAttribute="height" constant="79" id="HNU-J4-rU8"/>
+                                    <constraint firstAttribute="width" constant="375" id="Zd9-wI-pPZ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="YJn-eJ-6Xz" secondAttribute="trailing" id="3G9-sU-ae1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YJn-eJ-6Xz" secondAttribute="bottom" id="7Yn-WY-mcJ"/>
-                            <constraint firstAttribute="trailing" secondItem="zQM-j1-xpx" secondAttribute="trailing" id="TE0-vk-35p"/>
-                            <constraint firstItem="zQM-j1-xpx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="be9-hj-jXA"/>
-                            <constraint firstItem="k6a-Z6-6C4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="gAh-k8-da3"/>
-                            <constraint firstItem="YJn-eJ-6Xz" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="bottom" id="obc-7P-PhV"/>
-                            <constraint firstItem="zQM-j1-xpx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qZE-55-PtT"/>
-                            <constraint firstItem="YJn-eJ-6Xz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="txb-wX-INt"/>
+                            <constraint firstItem="zQM-j1-xpx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6aP-1Q-cHR"/>
+                            <constraint firstAttribute="trailing" secondItem="YJn-eJ-6Xz" secondAttribute="trailing" id="HGk-EH-fiI"/>
+                            <constraint firstItem="k6a-Z6-6C4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LqD-VD-FPQ"/>
+                            <constraint firstItem="YJn-eJ-6Xz" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="bottom" id="SMh-bi-B9C"/>
+                            <constraint firstItem="zQM-j1-xpx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tw2-Tl-L9j"/>
+                            <constraint firstAttribute="trailing" secondItem="zQM-j1-xpx" secondAttribute="trailing" id="bhd-XZ-1mx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YJn-eJ-6Xz" secondAttribute="bottom" id="dah-1R-daO"/>
+                            <constraint firstItem="YJn-eJ-6Xz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zME-Af-o7j"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="1700"/>
                     <connections>
-                        <outlet property="GPA" destination="90g-hh-pFf" id="HYV-5t-KZU"/>
                         <outlet property="classOneCredits" destination="Ayw-fp-6Zn" id="EbV-4M-VeD"/>
                         <outlet property="classOneGrade" destination="mfG-Nk-nf1" id="rWD-J1-Ich"/>
                         <outlet property="classOneName" destination="pLi-NC-SZm" id="yR3-Yi-LMU"/>
