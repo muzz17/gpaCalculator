@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet weak var numClassesPicker: UIPickerView!
     
-    @IBOutlet weak var GPA: UILabel!
+    // @IBOutlet weak var GPA: UILabel!
     
     @IBOutlet weak var classOneName: UITextField!
     @IBOutlet weak var classOneGrade: UIPickerView!
@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     
-    var numClasses = ["Number of Classes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    let numClasses = ["Number of Classes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let grades = ["Grade", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E/F"]
     let credits = ["Credit Hours", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0"]
 
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if(classOneGrade == pickerView){
             grade1String = grades[row]
             convertGradeToDouble()
-            GPA.text = "\(grade1 * credit1)"
+            //GPA.text = "\(grade1 * credit1)"
         } else if (classOneCredits == pickerView){
             if (row == 0){
                 credit1 = 0.0
@@ -90,7 +90,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             else {
                 credit1 = Double(credits[row])!
             }
-            GPA.text = "\(grade1 * credit1)"
+            // GPA.text = "\(grade1 * credit1)"
         }
         else if (numClassesPicker == pickerView){
             if (row == 0){
