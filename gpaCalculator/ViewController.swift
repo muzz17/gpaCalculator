@@ -84,6 +84,52 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.classOneCredits.delegate = self
         self.classOneCredits.dataSource = self
         
+        self.classTwoGrade.delegate = self
+        self.classTwoGrade.dataSource = self
+        self.classTwoCredits.delegate = self
+        self.classTwoCredits.dataSource = self
+        
+        self.classThreeGrade.delegate = self
+        self.classThreeGrade.dataSource = self
+        self.classThreeCredits.delegate = self
+        self.classThreeCredits.dataSource = self
+        
+        self.classFourGrade.delegate = self
+        self.classFourGrade.dataSource = self
+        self.classFourCredits.delegate = self
+        self.classFourCredits.dataSource = self
+        
+        self.classFiveGrade.delegate = self
+        self.classFiveGrade.dataSource = self
+        self.classFiveCredits.delegate = self
+        self.classFiveCredits.dataSource = self
+        
+        self.classSixGrade.delegate = self
+        self.classSixGrade.dataSource = self
+        self.classSixCredits.delegate = self
+        self.classSixCredits.dataSource = self
+        
+        self.classSevenGrade.delegate = self
+        self.classSevenGrade.dataSource = self
+        self.classSevenCredits.delegate = self
+        self.classSevenCredits.dataSource = self
+        
+        self.classEightGrade.delegate = self
+        self.classEightGrade.dataSource = self
+        self.classEightCredits.delegate = self
+        self.classEightCredits.dataSource = self
+        
+        self.classNineGrade.delegate = self
+        self.classNineGrade.dataSource = self
+        self.classNineCredits.delegate = self
+        self.classNineCredits.dataSource = self
+        
+        self.classTenGrade.delegate = self
+        self.classTenGrade.dataSource = self
+        self.classTenCredits.delegate = self
+        self.classTenCredits.dataSource = self
+
+        
         GPA.text = "\(course1.grade * course1.credit)"
         
         super.viewDidLoad()
@@ -97,26 +143,138 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (numClassesPicker == pickerView){
-            return numClasses.count
-        }
-        else if(classOneGrade == pickerView){
+//        if (numClassesPicker == pickerView){
+//            return numClasses.count
+//        }
+        if (classOneGrade == pickerView){
             return grades.count
         }
-        else {
+        else if (classOneCredits == pickerView) {
             return credits.count
+        }
+        else if (classTwoGrade == pickerView){
+            return grades.count
+        }
+        else if (classTwoCredits == pickerView) {
+            return credits.count
+        }
+        else if (classThreeGrade == pickerView){
+            return grades.count
+        }
+        else if (classThreeCredits == pickerView) {
+            return credits.count
+        }
+        else if (classFourGrade == pickerView){
+            return grades.count
+        }
+        else if (classFourCredits == pickerView) {
+            return credits.count
+        }
+        else if (classFiveGrade == pickerView){
+            return grades.count
+        }
+        else if (classFiveCredits == pickerView) {
+            return credits.count
+        }
+        else if (classSixGrade == pickerView){
+            return grades.count
+        }
+        else if (classSixCredits == pickerView) {
+            return credits.count
+        }
+        else if (classSevenGrade == pickerView){
+            return grades.count
+        }
+        else if (classSevenCredits == pickerView) {
+            return credits.count
+        }
+        else if (classEightGrade == pickerView){
+            return grades.count
+        }
+        else if (classEightCredits == pickerView) {
+            return credits.count
+        }
+        else if (classNineGrade == pickerView){
+            return grades.count
+        }
+        else if (classNineCredits == pickerView) {
+            return credits.count
+        }
+        else if (classTenGrade == pickerView){
+            return grades.count
+        }
+        else if (classTenCredits == pickerView) {
+            return credits.count
+        }
+        else {
+            return numClasses.count
         }
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        if (numClassesPicker == pickerView){
-            return "\(numClasses[row])"
-        }
-        else if(classOneGrade == pickerView){
+        if (classOneGrade == pickerView){
             return "\(grades[row])"
-        } else {
+        }
+        else if (classOneCredits == pickerView) {
             return "\(credits[row])"
+        }
+        else if (classTwoGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classTwoCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classThreeGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classThreeCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classFourGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classFourCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classFiveGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classFiveCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classSixGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classSixCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classSevenGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classSevenCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classEightGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classEightCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classNineGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classNineCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else if (classTenGrade == pickerView){
+            return "\(grades[row])"
+        }
+        else if (classTenCredits == pickerView) {
+            return "\(credits[row])"
+        }
+        else {
+            return "\(numClasses[row])"
         }
     }
     
