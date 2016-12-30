@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    // outlets
 
     @IBOutlet weak var numClassesPicker: UIPickerView!
     
@@ -54,8 +56,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var classTenGrade: UIPickerView!
     @IBOutlet weak var classTenCredits: UIPickerView!
     
-    
-    
+    // variables
     
     let numClasses = ["Number of Classes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let grades = ["Grade", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E/F"]
@@ -71,6 +72,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var course8 = course(gradeString: "", grade: 0.0, credit: 0.0)
     var course9 = course(gradeString: "", grade: 0.0, credit: 0.0)
     var course10 = course(gradeString: "", grade: 0.0, credit: 0.0)
+    
+    var numCourses: Double = 0.0
     
     
 
@@ -143,9 +146,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        if (numClassesPicker == pickerView){
-//            return numClasses.count
-//        }
         if (classOneGrade == pickerView){
             return grades.count
         }
@@ -295,16 +295,275 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         else if (numClassesPicker == pickerView){
             if (row == 0){
-                classOneName.isHidden = true
-                classOneGrade.isHidden = true
-                classOneCredits.isHidden = true
+                numCourses = 0.0
             }
             else {
-                classOneName.isHidden = false
-                classOneGrade.isHidden = false
-                classOneCredits.isHidden = false
+                numCourses = Double(row)
+            }
+            
+            if (row == 0){
+                
+                hideCourseOne()
+                hideCourseTwo()
+                hideCourseThree()
+                hideCourseFour()
+                hideCourseFive()
+                hideCourseSix()
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 1){
+                
+                showCourseOne()
+                
+                hideCourseTwo()
+                hideCourseThree()
+                hideCourseFour()
+                hideCourseFive()
+                hideCourseSix()
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 2){
+                
+                showCourseOne()
+                showCourseTwo()
+                
+                hideCourseThree()
+                hideCourseFour()
+                hideCourseFive()
+                hideCourseSix()
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 3){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                
+                hideCourseFour()
+                hideCourseFive()
+                hideCourseSix()
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 4){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                
+                hideCourseFive()
+                hideCourseSix()
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 5){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                showCourseFive()
+                
+                hideCourseSix()
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 6){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                showCourseFive()
+                showCourseSix()
+                
+                hideCourseSeven()
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 7){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                showCourseFive()
+                showCourseSix()
+                showCourseSeven()
+                
+                hideCourseEight()
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 8){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                showCourseFive()
+                showCourseSix()
+                showCourseSeven()
+                showCourseEight()
+                
+                hideCourseNine()
+                hideCourseTen()
+            }
+            else if (row == 9){
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                showCourseFive()
+                showCourseSix()
+                showCourseSeven()
+                showCourseEight()
+                showCourseNine()
+                
+                hideCourseTen()
+            }
+            else {
+                
+                showCourseOne()
+                showCourseTwo()
+                showCourseThree()
+                showCourseFour()
+                showCourseFive()
+                showCourseSix()
+                showCourseSeven()
+                showCourseEight()
+                showCourseNine()
+                showCourseTen()
             }
         }
+    }
+    
+    func hideCourseOne(){
+        classOneName.isHidden = true
+        classOneGrade.isHidden = true
+        classOneCredits.isHidden = true
+    }
+    func showCourseOne(){
+        classOneName.isHidden = false
+        classOneGrade.isHidden = false
+        classOneCredits.isHidden = false
+    }
+    
+    func hideCourseTwo(){
+        classTwoName.isHidden = true
+        classTwoGrade.isHidden = true
+        classTwoCredits.isHidden = true
+    }
+    func showCourseTwo(){
+        classTwoName.isHidden = false
+        classTwoGrade.isHidden = false
+        classTwoCredits.isHidden = false
+    }
+    
+    func hideCourseThree(){
+        classThreeName.isHidden = true
+        classThreeGrade.isHidden = true
+        classThreeCredits.isHidden = true
+    }
+    func showCourseThree(){
+        classThreeName.isHidden = false
+        classThreeGrade.isHidden = false
+        classThreeCredits.isHidden = false
+    }
+    
+    func hideCourseFour(){
+        classFourName.isHidden = true
+        classFourGrade.isHidden = true
+        classFourCredits.isHidden = true
+    }
+    func showCourseFour(){
+        classFourName.isHidden = false
+        classFourGrade.isHidden = false
+        classFourCredits.isHidden = false
+    }
+    
+    func hideCourseFive(){
+        classFiveName.isHidden = true
+        classFiveGrade.isHidden = true
+        classFiveCredits.isHidden = true
+    }
+    func showCourseFive(){
+        classFiveName.isHidden = false
+        classFiveGrade.isHidden = false
+        classFiveCredits.isHidden = false
+    }
+    
+    func hideCourseSix(){
+        classSixName.isHidden = true
+        classSixGrade.isHidden = true
+        classSixCredits.isHidden = true
+    }
+    func showCourseSix(){
+        classSixName.isHidden = false
+        classSixGrade.isHidden = false
+        classSixCredits.isHidden = false
+    }
+    
+    func hideCourseSeven(){
+        classSevenName.isHidden = true
+        classSevenGrade.isHidden = true
+        classSevenCredits.isHidden = true
+    }
+    func showCourseSeven(){
+        classSevenName.isHidden = false
+        classSevenGrade.isHidden = false
+        classSevenCredits.isHidden = false
+    }
+    
+    func hideCourseEight(){
+        classEightName.isHidden = true
+        classEightGrade.isHidden = true
+        classEightCredits.isHidden = true
+    }
+    func showCourseEight(){
+        classEightName.isHidden = false
+        classEightGrade.isHidden = false
+        classEightCredits.isHidden = false
+    }
+    
+    func hideCourseNine(){
+        classNineName.isHidden = true
+        classNineGrade.isHidden = true
+        classNineCredits.isHidden = true
+    }
+    func showCourseNine(){
+        classNineName.isHidden = false
+        classNineGrade.isHidden = false
+        classNineCredits.isHidden = false
+    }
+    
+    func hideCourseTen(){
+        classTenName.isHidden = true
+        classTenGrade.isHidden = true
+        classTenCredits.isHidden = true
+    }
+    func showCourseTen(){
+        classTenName.isHidden = false
+        classTenGrade.isHidden = false
+        classTenCredits.isHidden = false
     }
     
     }
