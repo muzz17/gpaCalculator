@@ -56,14 +56,14 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Nk-nf1">
-                                                <rect key="frame" x="8" y="231" width="178" height="74"/>
+                                                <rect key="frame" x="8" y="231" width="160" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="9rt-Kj-Nl3"/>
-                                                    <constraint firstAttribute="width" constant="178" id="Oh3-Y2-Y05"/>
+                                                    <constraint firstAttribute="width" constant="160" id="Oh3-Y2-Y05"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-fp-6Zn">
-                                                <rect key="frame" x="189" y="231" width="178" height="74"/>
+                                                <rect key="frame" x="207" y="231" width="160" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="dBC-pq-8yf"/>
                                                 </constraints>
@@ -307,7 +307,7 @@
                                             <constraint firstAttribute="trailing" secondItem="3Iq-TC-Jkt" secondAttribute="trailing" constant="8" id="HrR-vM-qhI"/>
                                             <constraint firstAttribute="trailing" secondItem="EpN-ew-GYF" secondAttribute="trailing" constant="8" id="I2W-Lm-OWU"/>
                                             <constraint firstItem="A5E-Th-02a" firstAttribute="top" secondItem="P8r-U4-voY" secondAttribute="bottom" constant="22" id="IG3-vn-cCK"/>
-                                            <constraint firstItem="Ayw-fp-6Zn" firstAttribute="leading" secondItem="mfG-Nk-nf1" secondAttribute="trailing" constant="3" id="IOz-Ig-o83"/>
+                                            <constraint firstItem="Ayw-fp-6Zn" firstAttribute="leading" secondItem="mfG-Nk-nf1" secondAttribute="trailing" constant="39" id="IOz-Ig-o83"/>
                                             <constraint firstAttribute="trailing" secondItem="a21-9T-DOf" secondAttribute="trailing" constant="8" id="KcW-vA-pNF"/>
                                             <constraint firstAttribute="trailing" secondItem="P8r-U4-voY" secondAttribute="trailing" constant="8" id="N0I-eL-HMa"/>
                                             <constraint firstAttribute="trailing" secondItem="pLi-NC-SZm" secondAttribute="trailing" constant="8" id="NVE-hy-Eva"/>
