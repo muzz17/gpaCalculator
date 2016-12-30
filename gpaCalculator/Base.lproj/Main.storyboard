@@ -377,9 +377,24 @@
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4N5-ue-xl5">
                                 <rect key="frame" x="0.0" y="2021" width="375" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-UC-IZj">
+                                        <rect key="frame" x="142" y="29" width="91" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="91" id="G0v-aP-qig"/>
+                                            <constraint firstAttribute="height" constant="21" id="qS0-HD-a4U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.23265103540000001" green="0.38265267829999999" blue="0.72728365380000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="cQS-UC-IZj" firstAttribute="top" secondItem="4N5-ue-xl5" secondAttribute="top" constant="29" id="BdW-NU-OpN"/>
                                     <constraint firstAttribute="height" constant="79" id="Edc-bl-iRh"/>
+                                    <constraint firstAttribute="bottom" secondItem="cQS-UC-IZj" secondAttribute="bottom" constant="29" id="F3j-O7-Up5"/>
+                                    <constraint firstItem="cQS-UC-IZj" firstAttribute="centerX" secondItem="4N5-ue-xl5" secondAttribute="centerX" id="aEy-ZY-Sdn"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-j1-xpx">
@@ -424,6 +439,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="2100"/>
                     <connections>
+                        <outlet property="GPA" destination="cQS-UC-IZj" id="QP5-fn-QtN"/>
                         <outlet property="classOneCredits" destination="Ayw-fp-6Zn" id="EbV-4M-VeD"/>
                         <outlet property="classOneGrade" destination="mfG-Nk-nf1" id="rWD-J1-Ich"/>
                         <outlet property="classOneName" destination="pLi-NC-SZm" id="yR3-Yi-LMU"/>
