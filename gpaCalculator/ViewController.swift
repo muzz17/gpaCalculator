@@ -18,16 +18,48 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var classOneGrade: UIPickerView!
     @IBOutlet weak var classOneCredits: UIPickerView!
     
+    @IBOutlet weak var classTwoName: UITextField!
+    @IBOutlet weak var classTwoGrade: UIPickerView!
+    @IBOutlet weak var classTwoCredits: UIPickerView!
+    
+    @IBOutlet weak var classThreeName: UITextField!
+    @IBOutlet weak var classThreeGrade: UIPickerView!
+    @IBOutlet weak var classThreeCredits: UIPickerView!
+    
+    @IBOutlet weak var classFourName: UITextField!
+    @IBOutlet weak var classFourGrade: UIPickerView!
+    @IBOutlet weak var classFourCredits: UIPickerView!
+    
+    @IBOutlet weak var classFiveName: UITextField!
+    @IBOutlet weak var classFiveGrade: UIPickerView!
+    @IBOutlet weak var classFiveCredits: UIPickerView!
+    
+    @IBOutlet weak var classSixName: UITextField!
+    @IBOutlet weak var classSixGrade: UIPickerView!
+    @IBOutlet weak var classSixCredits: UIPickerView!
+    
+    @IBOutlet weak var classSevenName: UITextField!
+    @IBOutlet weak var classSevenGrade: UIPickerView!
+    @IBOutlet weak var classSevenCredits: UIPickerView!
+    
+    @IBOutlet weak var classEightName: UITextField!
+    @IBOutlet weak var classEightGrade: UIPickerView!
+    @IBOutlet weak var classEightCredits: UIPickerView!
+    
+    @IBOutlet weak var classNineName: UITextField!
+    @IBOutlet weak var classNineGrade: UIPickerView!
+    @IBOutlet weak var classNineCredits: UIPickerView!
+    
+    @IBOutlet weak var classTenName: UITextField!
+    @IBOutlet weak var classTenGrade: UIPickerView!
+    @IBOutlet weak var classTenCredits: UIPickerView!
+    
     
     
     
     let numClasses = ["Number of Classes", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     let grades = ["Grade", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E/F"]
     let credits = ["Credit Hours", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0"]
-
-//    var grade1String: String = ""
-//    var grade1: Double = 0.0
-//    var credit1: Double = 0.0
     
     var course1 = course(gradeString: "", grade: 0.0, credit: 0.0)
     

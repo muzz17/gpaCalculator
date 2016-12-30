@@ -68,7 +68,7 @@
                                                     <constraint firstAttribute="height" constant="74" id="dBC-pq-8yf"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zz-2A-TJB">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #2 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zz-2A-TJB">
                                                 <rect key="frame" x="8" y="327" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0yw-jT-lfn"/>
@@ -91,7 +91,7 @@
                                                     <constraint firstAttribute="height" constant="74" id="uXM-HY-esT"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZ2-XI-HdD">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #3 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZ2-XI-HdD">
                                                 <rect key="frame" x="8" y="475" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="cdF-cX-n9x"/>
@@ -114,7 +114,7 @@
                                                     <constraint firstAttribute="height" constant="74" id="RRz-l8-PpJ"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-Th-02a">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #4 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-Th-02a">
                                                 <rect key="frame" x="8" y="623" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="NyH-NY-iDB"/>
@@ -137,7 +137,7 @@
                                                     <constraint firstAttribute="width" constant="178" id="nT9-HT-vse"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBT-z6-g40">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #5 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBT-z6-g40">
                                                 <rect key="frame" x="8" y="771" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="rgN-oV-9MR"/>
@@ -160,7 +160,7 @@
                                                     <constraint firstAttribute="width" constant="178" id="qo1-uL-uBa"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-0m-QML">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #6 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-0m-QML">
                                                 <rect key="frame" x="8" y="919" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="odN-at-9lt"/>
@@ -176,7 +176,7 @@
                                                     <constraint firstAttribute="width" constant="178" id="arW-gD-gUh"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-EM-lJt">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #7 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-EM-lJt">
                                                 <rect key="frame" x="8" y="1067" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ifF-xz-5Y9"/>
@@ -199,7 +199,7 @@
                                                     <constraint firstAttribute="height" constant="74" id="s0j-WN-cz4"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLj-ut-SVd">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #8 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLj-ut-SVd">
                                                 <rect key="frame" x="8" y="1215" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="egW-Rr-JiF"/>
@@ -222,7 +222,7 @@
                                                     <constraint firstAttribute="height" constant="74" id="mbm-my-0xc"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-BV-2KS">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #9 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-BV-2KS">
                                                 <rect key="frame" x="8" y="1363" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="xaW-Mn-enX"/>
@@ -245,7 +245,7 @@
                                                     <constraint firstAttribute="height" constant="74" id="ySl-8Y-ZpQ"/>
                                                 </constraints>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNe-c1-GCa">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #10 Name (optional)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNe-c1-GCa">
                                                 <rect key="frame" x="8" y="1511" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="8XE-Lw-NRO"/>
@@ -440,9 +440,36 @@
                     <size key="freeformSize" width="375" height="2100"/>
                     <connections>
                         <outlet property="GPA" destination="cQS-UC-IZj" id="QP5-fn-QtN"/>
+                        <outlet property="classEightCredits" destination="xVq-RU-vhW" id="I9u-hM-QNO"/>
+                        <outlet property="classEightGrade" destination="V4h-dg-tVl" id="yqx-R5-M4N"/>
+                        <outlet property="classEightName" destination="xLj-ut-SVd" id="Sg5-CF-cd1"/>
+                        <outlet property="classFiveCredits" destination="Cjp-EQ-C2u" id="wXl-f3-T9m"/>
+                        <outlet property="classFiveGrade" destination="hpP-t7-caR" id="jLA-xU-L8l"/>
+                        <outlet property="classFiveName" destination="CBT-z6-g40" id="N6K-Au-pcI"/>
+                        <outlet property="classFourCredits" destination="a21-9T-DOf" id="qFq-fG-FQO"/>
+                        <outlet property="classFourGrade" destination="v9V-6e-arC" id="2P0-lr-Uli"/>
+                        <outlet property="classFourName" destination="A5E-Th-02a" id="pNC-GK-dwJ"/>
+                        <outlet property="classNineCredits" destination="fBv-Uu-0CI" id="8sK-uf-Da5"/>
+                        <outlet property="classNineGrade" destination="qtL-yK-ZFx" id="5Fh-db-ZmR"/>
+                        <outlet property="classNineName" destination="JWo-BV-2KS" id="6rj-gs-rS0"/>
                         <outlet property="classOneCredits" destination="Ayw-fp-6Zn" id="EbV-4M-VeD"/>
                         <outlet property="classOneGrade" destination="mfG-Nk-nf1" id="rWD-J1-Ich"/>
                         <outlet property="classOneName" destination="pLi-NC-SZm" id="yR3-Yi-LMU"/>
+                        <outlet property="classSevenCredits" destination="RFg-Bs-yHl" id="PAu-xN-eBh"/>
+                        <outlet property="classSevenGrade" destination="H2h-Kl-E7c" id="P8c-b5-2Xr"/>
+                        <outlet property="classSevenName" destination="6uN-EM-lJt" id="Ef3-ej-IzP"/>
+                        <outlet property="classSixCredits" destination="3Iq-TC-Jkt" id="hYt-bh-Wxj"/>
+                        <outlet property="classSixGrade" destination="CwR-dO-LaI" id="iwY-cT-c6b"/>
+                        <outlet property="classSixName" destination="fi6-0m-QML" id="piz-lM-vO7"/>
+                        <outlet property="classTenCredits" destination="EpN-ew-GYF" id="Hl0-FL-zBp"/>
+                        <outlet property="classTenGrade" destination="btF-9r-b41" id="vK0-qh-i4Z"/>
+                        <outlet property="classTenName" destination="RNe-c1-GCa" id="y5s-vK-8TY"/>
+                        <outlet property="classThreeCredits" destination="P8r-U4-voY" id="kqD-k5-xBc"/>
+                        <outlet property="classThreeGrade" destination="4FO-gq-Kxp" id="RnN-Ox-aQD"/>
+                        <outlet property="classThreeName" destination="FZ2-XI-HdD" id="LyO-cy-DaM"/>
+                        <outlet property="classTwoCredits" destination="HMq-vL-lsK" id="dqa-zX-asw"/>
+                        <outlet property="classTwoGrade" destination="aAn-Z9-Tqt" id="M6o-C0-CmF"/>
+                        <outlet property="classTwoName" destination="6Zz-2A-TJB" id="AsQ-A4-0jP"/>
                         <outlet property="numClassesPicker" destination="tB7-nN-6kC" id="y7V-CA-B6c"/>
                     </connections>
                 </viewController>
