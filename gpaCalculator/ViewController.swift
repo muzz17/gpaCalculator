@@ -62,16 +62,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     let grades = ["Grade", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E/F"]
     let credits = ["Credit Hours", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0"]
     
-    var course1 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course2 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course3 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course4 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course5 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course6 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course7 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course8 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course9 = course(gradeString: "", grade: 0.0, credit: 0.0)
-    var course10 = course(gradeString: "", grade: 0.0, credit: 0.0)
+    var course1 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course2 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course3 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course4 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course5 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course6 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course7 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course8 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course9 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course10 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
     
     var numCourses: Double = 0.0
     

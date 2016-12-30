@@ -26,9 +26,14 @@ import Foundation
 
 class course {
     
+    // private variables
+    
     fileprivate var _gradeString: String = ""
     fileprivate var _grade: Double = 0.0
     fileprivate var _credit: Double = 0.0
+    fileprivate var _gradePoints: Double = 0.0
+    
+    // get and set varables
     
     var gradeString: String {
         get {
@@ -48,8 +53,6 @@ class course {
         }
     }
     
-    
-    
     var credit: Double {
         get {
             return _credit
@@ -59,11 +62,24 @@ class course {
         }
     }
     
-    init(gradeString: String, grade: Double, credit: Double){
+    var gradePoints: Double {
+        get {
+            return _gradePoints
+        }
+        set (newGradePoints) {
+            self._gradePoints = newGradePoints
+        }
+    }
+    
+    // initializer
+    
+    init(gradeString: String, grade: Double, credit: Double, gradePoints: Double){
         self._gradeString = gradeString
         self._grade = grade
         self._credit = credit
     }
+    
+    // functions
     
     func gradeStringToDouble() {
         if (gradeString == "A"){
