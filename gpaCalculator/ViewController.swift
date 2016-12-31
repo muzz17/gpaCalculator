@@ -741,7 +741,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func calcGPA(_ sender: Any) {
         
         if (numCourses == 0){
-            GPA.text = "0.0"
+            GPA.text = "0.00"
         }
         else if (numCourses == 1.0){
             gradePointSum = course1.gradePoints
@@ -822,6 +822,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
             finalGPA = gradePointSum / creditHoursSum
             GPA.text = "\(finalGPA)"
+        }
+        
+        if (creditHoursSum == 0){
+            GPA.text = "0.00"
         }
         
     }

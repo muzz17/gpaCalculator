@@ -117,6 +117,7 @@ class course {
         }
         else {
             grade = 0.0
+            // gradeString = "X"
         }
     }
     
