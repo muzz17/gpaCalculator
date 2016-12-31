@@ -74,6 +74,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var course10 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
     
     var numCourses: Double = 0.0
+    var gradePointSum: Double = 0.0
+    var finalGPA: Double = 0.0
+    
     
     
 
@@ -283,17 +286,143 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if(classOneGrade == pickerView){
             course1.gradeString = grades[row]
             course1.gradeStringToDouble()
-            GPA.text = "\(course1.grade * course1.credit)"
-        } else if (classOneCredits == pickerView){
+            course1.gradePoints = (course1.grade * course1.credit)
+        }
+        else if (classOneCredits == pickerView){
             if (row == 0){
                 course1.credit = 0.0
             }
             else {
                 course1.credit = Double(credits[row])!
             }
-            GPA.text = "\(course1.grade * course1.credit)"
+            course1.gradePoints = (course1.grade * course1.credit)
         }
-        else if (numClassesPicker == pickerView){
+        else if(classTwoGrade == pickerView){
+            course2.gradeString = grades[row]
+            course2.gradeStringToDouble()
+            course2.gradePoints = (course2.grade * course2.credit)
+        }
+        else if (classTwoCredits == pickerView){
+            if (row == 0){
+                course2.credit = 0.0
+            }
+            else {
+                course2.credit = Double(credits[row])!
+            }
+            course2.gradePoints = (course2.grade * course2.credit)
+        }
+        else if(classThreeGrade == pickerView){
+            course3.gradeString = grades[row]
+            course3.gradeStringToDouble()
+            course3.gradePoints = (course3.grade * course3.credit)
+        } else if (classThreeCredits == pickerView){
+            if (row == 0){
+                course3.credit = 0.0
+            }
+            else {
+                course3.credit = Double(credits[row])!
+            }
+            course3.gradePoints = (course3.grade * course3.credit)
+        }
+        else if(classFourGrade == pickerView){
+            course4.gradeString = grades[row]
+            course4.gradeStringToDouble()
+            course4.gradePoints = (course4.grade * course4.credit)
+        }
+        else if (classFourCredits == pickerView){
+            if (row == 0){
+                course4.credit = 0.0
+            }
+            else {
+                course4.credit = Double(credits[row])!
+            }
+            course4.gradePoints = (course4.grade * course4.credit)
+        }
+        else if(classFiveGrade == pickerView){
+            course5.gradeString = grades[row]
+            course5.gradeStringToDouble()
+            course5.gradePoints = (course5.grade * course5.credit)
+        }
+        else if (classFiveCredits == pickerView){
+            if (row == 0){
+                course5.credit = 0.0
+            }
+            else {
+                course5.credit = Double(credits[row])!
+            }
+            course5.gradePoints = (course5.grade * course5.credit)
+        }
+        else if(classSixGrade == pickerView){
+            course6.gradeString = grades[row]
+            course6.gradeStringToDouble()
+            course6.gradePoints = (course6.grade * course6.credit)
+        }
+        else if (classSixCredits == pickerView){
+            if (row == 0){
+                course6.credit = 0.0
+            }
+            else {
+                course6.credit = Double(credits[row])!
+            }
+            course6.gradePoints = (course6.grade * course6.credit)
+        }
+        else if(classSevenGrade == pickerView){
+            course7.gradeString = grades[row]
+            course7.gradeStringToDouble()
+            course7.gradePoints = (course7.grade * course7.credit)
+        }
+        else if (classSevenCredits == pickerView){
+            if (row == 0){
+                course7.credit = 0.0
+            }
+            else {
+                course7.credit = Double(credits[row])!
+            }
+            course7.gradePoints = (course7.grade * course7.credit)
+        }
+        else if(classEightGrade == pickerView){
+            course8.gradeString = grades[row]
+            course8.gradeStringToDouble()
+            course8.gradePoints = (course8.grade * course8.credit)
+        }
+        else if (classEightCredits == pickerView){
+            if (row == 0){
+                course8.credit = 0.0
+            }
+            else {
+                course8.credit = Double(credits[row])!
+            }
+            course8.gradePoints = (course8.grade * course8.credit)
+        }
+        else if(classNineGrade == pickerView){
+            course9.gradeString = grades[row]
+            course9.gradeStringToDouble()
+            course9.gradePoints = (course9.grade * course9.credit)
+        }
+        else if (classNineCredits == pickerView){
+            if (row == 0){
+                course9.credit = 0.0
+            }
+            else {
+                course9.credit = Double(credits[row])!
+            }
+            course9.gradePoints = (course9.grade * course9.credit)
+        }
+        else if(classTenGrade == pickerView){
+            course10.gradeString = grades[row]
+            course10.gradeStringToDouble()
+            course10.gradePoints = (course10.grade * course10.credit)
+        }
+        else if (classTenCredits == pickerView){
+            if (row == 0){
+                course10.credit = 0.0
+            }
+            else {
+                course10.credit = Double(credits[row])!
+            }
+            course10.gradePoints = (course10.grade * course10.credit)
+        }
+        else {
             if (row == 0){
                 numCourses = 0.0
             }
@@ -302,6 +431,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             
             if (row == 0){
+                
+                gradePointSum = 0.0
                 
                 hideCourseOne()
                 hideCourseTwo()
@@ -315,6 +446,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseTen()
             }
             else if (row == 1){
+                
+                gradePointSum = course1.gradePoints
                 
                 showCourseOne()
                 
@@ -330,6 +463,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             else if (row == 2){
                 
+                gradePointSum = course1.gradePoints + course2.gradePoints
+                
                 showCourseOne()
                 showCourseTwo()
                 
@@ -343,6 +478,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseTen()
             }
             else if (row == 3){
+                
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -358,6 +495,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             else if (row == 4){
                 
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints
+                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -371,6 +510,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseTen()
             }
             else if (row == 5){
+                
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -386,6 +527,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             else if (row == 6){
                 
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints
+                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -399,6 +542,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseTen()
             }
             else if (row == 7){
+                
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -414,6 +559,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             else if (row == 8){
                 
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints
+                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -427,6 +574,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseTen()
             }
             else if (row == 9){
+                
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -442,6 +591,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             else {
                 
+                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints + course10.gradePoints
+                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -454,6 +605,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 showCourseTen()
             }
         }
+        computeGPA()
     }
     
     func hideCourseOne(){
@@ -564,6 +716,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         classTenName.isHidden = false
         classTenGrade.isHidden = false
         classTenCredits.isHidden = false
+    }
+    
+    func computeGPA() {
+        
+        finalGPA = gradePointSum / numCourses
+        
+        GPA.text = "\(finalGPA)"
     }
     
     }
