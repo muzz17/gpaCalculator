@@ -422,7 +422,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             course10.gradePoints = (course10.grade * course10.credit)
         }
-        else {
+        else if (numClassesPicker == pickerView){
             if (row == 0){
                 numCourses = 0.0
             }
@@ -444,6 +444,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 1){
                 
@@ -460,6 +462,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 2){
                 
@@ -476,6 +480,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 3){
                 
@@ -492,6 +498,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 4){
                 
@@ -508,6 +516,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 5){
                 
@@ -524,6 +534,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 6){
                 
@@ -540,6 +552,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 7){
                 
@@ -556,6 +570,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 8){
                 
@@ -572,6 +588,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
                 hideCourseNine()
                 hideCourseTen()
+                
+                computeGPA()
             }
             else if (row == 9){
                 
@@ -588,6 +606,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 showCourseNine()
                 
                 hideCourseTen()
+                
+                computeGPA()
             }
             else {
                 
@@ -603,9 +623,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 showCourseEight()
                 showCourseNine()
                 showCourseTen()
+                
+                computeGPA()
             }
         }
-        computeGPA()
+        // computeGPA() 
     }
     
     func hideCourseOne(){
@@ -722,7 +744,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         finalGPA = gradePointSum / numCourses
         
-        GPA.text = "\(finalGPA)"
+        if (numCourses == 0){
+            GPA.text = "0.0"
+        }
+        else{
+            GPA.text = "\(finalGPA)"
+        }
     }
     
     }
