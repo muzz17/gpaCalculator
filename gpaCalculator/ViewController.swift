@@ -136,8 +136,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.classTenCredits.delegate = self
         self.classTenCredits.dataSource = self
 
-        
-        GPA.text = "\(course1.grade * course1.credit)"
+        hideCourseOne()
+        hideCourseTwo()
+        hideCourseThree()
+        hideCourseFour()
+        hideCourseFive()
+        hideCourseSix()
+        hideCourseSeven()
+        hideCourseEight()
+        hideCourseNine()
+        hideCourseTen()
         
         super.viewDidLoad()
         
