@@ -6,22 +6,6 @@
 //  Copyright © 2016 Muzzammil Ahmed. All rights reserved.
 //
 
-//fileprivate var _imagePath: String
-//fileprivate var _title: String
-//
-//var imagePath: String {
-//    return _imagePath
-//}
-//
-//var title: String {
-//    return _title
-//}
-//
-//init(imagePath: String, title: String) {
-//    self._imagePath = imagePath
-//    self._title = title
-//}
-
 import Foundation
 
 class course {
