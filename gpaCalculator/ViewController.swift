@@ -75,6 +75,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var numCourses: Double = 0.0
     var gradePointSum: Double = 0.0
+    var creditHoursSum: Double = 0.0
     var finalGPA: Double = 0.0
     
     
@@ -444,8 +445,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseEight()
                 hideCourseNine()
                 hideCourseTen()
-                
-                computeGPA()
+
             }
             else if (row == 1){
                 
@@ -463,7 +463,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 2){
                 
@@ -481,7 +480,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 3){
                 
@@ -499,7 +497,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 4){
                 
@@ -517,7 +514,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 5){
                 
@@ -535,7 +531,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 6){
                 
@@ -553,7 +548,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 7){
                 
@@ -571,7 +565,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 8){
                 
@@ -589,7 +582,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 hideCourseNine()
                 hideCourseTen()
                 
-                computeGPA()
             }
             else if (row == 9){
                 
@@ -607,7 +599,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 
                 hideCourseTen()
                 
-                computeGPA()
             }
             else {
                 
@@ -624,10 +615,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 showCourseNine()
                 showCourseTen()
                 
-                computeGPA()
             }
         }
-        // computeGPA() 
+
     }
     
     func hideCourseOne(){
@@ -740,17 +730,94 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         classTenCredits.isHidden = false
     }
     
-    func computeGPA() {
-        
-        finalGPA = gradePointSum / numCourses
+    @IBAction func calcGPA(_ sender: Any) {
         
         if (numCourses == 0){
             GPA.text = "0.0"
         }
-        else{
+        else if (numCourses == 1.0){
+            gradePointSum = course1.gradePoints
+            
+            creditHoursSum = course1.credit
+            
+            finalGPA = gradePointSum / creditHoursSum
             GPA.text = "\(finalGPA)"
         }
+        else if (numCourses == 2.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 3.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 4.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 5.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 6.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 7.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 8.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit + course8.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 9.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit + course8.credit + course9.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        else if (numCourses == 10.0){
+            gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints + course10.gradePoints
+            
+            creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit + course8.credit + course9.credit + course10.credit
+
+            finalGPA = gradePointSum / creditHoursSum
+            GPA.text = "\(finalGPA)"
+        }
+        
     }
+    
     
     }
 

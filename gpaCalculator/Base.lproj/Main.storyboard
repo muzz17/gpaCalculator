@@ -393,7 +393,7 @@
                                 <rect key="frame" x="0.0" y="2021" width="375" height="79"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-UC-IZj">
-                                        <rect key="frame" x="142" y="29" width="91" height="21"/>
+                                        <rect key="frame" x="206" y="29" width="91" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="91" id="G0v-aP-qig"/>
                                             <constraint firstAttribute="height" constant="21" id="qS0-HD-a4U"/>
@@ -402,13 +402,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-WZ-9Bp">
+                                        <rect key="frame" x="104" y="25" width="31" height="30"/>
+                                        <state key="normal" title="Calc"/>
+                                        <connections>
+                                            <action selector="calcGPA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cj5-0c-3Mc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.23265103540000001" green="0.38265267829999999" blue="0.72728365380000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="3c4-WZ-9Bp" firstAttribute="leading" secondItem="4N5-ue-xl5" secondAttribute="leading" constant="104" id="2Un-Hd-qwv"/>
                                     <constraint firstItem="cQS-UC-IZj" firstAttribute="top" secondItem="4N5-ue-xl5" secondAttribute="top" constant="29" id="BdW-NU-OpN"/>
                                     <constraint firstAttribute="height" constant="79" id="Edc-bl-iRh"/>
                                     <constraint firstAttribute="bottom" secondItem="cQS-UC-IZj" secondAttribute="bottom" constant="29" id="F3j-O7-Up5"/>
-                                    <constraint firstItem="cQS-UC-IZj" firstAttribute="centerX" secondItem="4N5-ue-xl5" secondAttribute="centerX" id="aEy-ZY-Sdn"/>
+                                    <constraint firstAttribute="trailing" secondItem="cQS-UC-IZj" secondAttribute="trailing" constant="78" id="Ka3-PY-ZvZ"/>
+                                    <constraint firstItem="3c4-WZ-9Bp" firstAttribute="top" secondItem="4N5-ue-xl5" secondAttribute="top" constant="25" id="nXj-IZ-V5z"/>
+                                    <constraint firstAttribute="bottom" secondItem="3c4-WZ-9Bp" secondAttribute="bottom" constant="24" id="zB6-Bg-4ni"/>
                                 </constraints>
                             </view>
                         </subviews>
