@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // outlets
 
@@ -90,51 +90,61 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.classOneGrade.dataSource = self
         self.classOneCredits.delegate = self
         self.classOneCredits.dataSource = self
+        self.classOneName.delegate = self
         
         self.classTwoGrade.delegate = self
         self.classTwoGrade.dataSource = self
         self.classTwoCredits.delegate = self
         self.classTwoCredits.dataSource = self
+        self.classTwoName.delegate = self
         
         self.classThreeGrade.delegate = self
         self.classThreeGrade.dataSource = self
         self.classThreeCredits.delegate = self
         self.classThreeCredits.dataSource = self
+        self.classThreeName.delegate = self
         
         self.classFourGrade.delegate = self
         self.classFourGrade.dataSource = self
         self.classFourCredits.delegate = self
         self.classFourCredits.dataSource = self
+        self.classFourName.delegate = self
         
         self.classFiveGrade.delegate = self
         self.classFiveGrade.dataSource = self
         self.classFiveCredits.delegate = self
         self.classFiveCredits.dataSource = self
+        self.classFiveName.delegate = self
         
         self.classSixGrade.delegate = self
         self.classSixGrade.dataSource = self
         self.classSixCredits.delegate = self
         self.classSixCredits.dataSource = self
+        self.classSixName.delegate = self
         
         self.classSevenGrade.delegate = self
         self.classSevenGrade.dataSource = self
         self.classSevenCredits.delegate = self
         self.classSevenCredits.dataSource = self
+        self.classSevenName.delegate = self
         
         self.classEightGrade.delegate = self
         self.classEightGrade.dataSource = self
         self.classEightCredits.delegate = self
         self.classEightCredits.dataSource = self
+        self.classEightName.delegate = self
         
         self.classNineGrade.delegate = self
         self.classNineGrade.dataSource = self
         self.classNineCredits.delegate = self
         self.classNineCredits.dataSource = self
+        self.classNineName.delegate = self
         
         self.classTenGrade.delegate = self
         self.classTenGrade.dataSource = self
         self.classTenCredits.delegate = self
         self.classTenCredits.dataSource = self
+        self.classTenName.delegate = self
 
         hideCourseOne()
         hideCourseTwo()
@@ -149,6 +159,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         super.viewDidLoad()
         
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard)))
+        
+    }
+    
+    func dismissKeyboard() {
+        classOneName.resignFirstResponder()
+        classTwoName.resignFirstResponder()
+        classThreeName.resignFirstResponder()
+        classFourName.resignFirstResponder()
+        classFiveName.resignFirstResponder()
+        classSixName.resignFirstResponder()
+        classSevenName.resignFirstResponder()
+        classEightName.resignFirstResponder()
+        classNineName.resignFirstResponder()
+        classTenName.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     // The number of columns of data
