@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,61 +40,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papers" translatesAutoresizingMaskIntoConstraints="NO" id="Pk4-kF-Xcp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books3" translatesAutoresizingMaskIntoConstraints="NO" id="cPi-sP-lNo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-cT-vtT">
-                                <rect key="frame" x="64" y="163" width="247" height="108"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ6-PW-iVR">
+                                <rect key="frame" x="16" y="306.5" width="343" height="55"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="CQY-aM-Hxn"/>
-                                    <constraint firstAttribute="height" constant="108" id="ZOd-M2-xXd"/>
+                                    <constraint firstAttribute="height" constant="55" id="cT0-2P-Fpx"/>
                                 </constraints>
-                                <size key="titleShadowOffset" width="0.0" height="2.5"/>
-                                <state key="normal" image="semesterGPA">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="What grade do I need to get on my final?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-cT-vtT">
+                                <rect key="frame" x="16" y="241.5" width="343" height="55"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="olU-E7-hdU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="What is my semester GPA?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="6yD-GM-EG7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kQ-PB-vZI">
-                                <rect key="frame" x="64" y="279" width="247" height="108"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMO-1A-1TC">
+                                <rect key="frame" x="16" y="371.5" width="343" height="55"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="d2X-aR-j1z"/>
-                                    <constraint firstAttribute="height" constant="108" id="fCM-aI-Vyh"/>
+                                    <constraint firstAttribute="height" constant="55" id="FcS-xn-09Q"/>
                                 </constraints>
-                                <size key="titleShadowOffset" width="0.0" height="2.5"/>
-                                <state key="normal" image="finalGrade">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-wf-arI">
-                                <rect key="frame" x="64" y="395" width="247" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="9Bz-F8-BTC"/>
-                                    <constraint firstAttribute="width" constant="247" id="O5g-Wx-IsP"/>
-                                </constraints>
-                                <size key="titleShadowOffset" width="0.0" height="2.5"/>
-                                <state key="normal" image="About">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pk4-kF-Xcp" firstAttribute="top" secondItem="RTe-TD-Yaj" secondAttribute="top" id="1vd-G0-RAk"/>
-                            <constraint firstItem="zQY-wf-arI" firstAttribute="centerX" secondItem="RTe-TD-Yaj" secondAttribute="centerX" id="Bfa-dl-iIv"/>
-                            <constraint firstItem="zQY-wf-arI" firstAttribute="top" secondItem="6kQ-PB-vZI" secondAttribute="bottom" constant="8" id="JoI-gH-LMm"/>
-                            <constraint firstItem="6kQ-PB-vZI" firstAttribute="top" secondItem="zfC-cT-vtT" secondAttribute="bottom" constant="8" id="Oad-4w-fjU"/>
-                            <constraint firstItem="zfC-cT-vtT" firstAttribute="centerX" secondItem="RTe-TD-Yaj" secondAttribute="centerX" id="Y2d-wD-eEg"/>
-                            <constraint firstItem="6kQ-PB-vZI" firstAttribute="centerX" secondItem="RTe-TD-Yaj" secondAttribute="centerX" id="hDP-wv-d9G"/>
-                            <constraint firstItem="0dM-5I-wau" firstAttribute="top" secondItem="Pk4-kF-Xcp" secondAttribute="bottom" id="kn9-Nl-Poc"/>
-                            <constraint firstAttribute="trailing" secondItem="Pk4-kF-Xcp" secondAttribute="trailing" id="rqq-lL-xN9"/>
-                            <constraint firstItem="Pk4-kF-Xcp" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leading" id="z83-fH-4YY"/>
-                            <constraint firstItem="6kQ-PB-vZI" firstAttribute="centerY" secondItem="RTe-TD-Yaj" secondAttribute="centerY" id="zIT-Mt-V0c"/>
+                            <constraint firstItem="XQ6-PW-iVR" firstAttribute="centerY" secondItem="RTe-TD-Yaj" secondAttribute="centerY" id="5UU-dM-gCZ"/>
+                            <constraint firstItem="XQ6-PW-iVR" firstAttribute="trailing" secondItem="RTe-TD-Yaj" secondAttribute="trailingMargin" id="AWt-EO-G7t"/>
+                            <constraint firstItem="kMO-1A-1TC" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leadingMargin" id="C0A-Hv-S8v"/>
+                            <constraint firstItem="XQ6-PW-iVR" firstAttribute="top" secondItem="zfC-cT-vtT" secondAttribute="bottom" constant="10" id="DvQ-p0-p8S"/>
+                            <constraint firstItem="zfC-cT-vtT" firstAttribute="trailing" secondItem="RTe-TD-Yaj" secondAttribute="trailingMargin" id="M7p-3v-w0O"/>
+                            <constraint firstItem="XQ6-PW-iVR" firstAttribute="centerX" secondItem="RTe-TD-Yaj" secondAttribute="centerX" id="RlE-hY-Ful"/>
+                            <constraint firstItem="zfC-cT-vtT" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leadingMargin" id="TCk-MN-p0B"/>
+                            <constraint firstItem="XQ6-PW-iVR" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leadingMargin" id="XZt-lb-fJF"/>
+                            <constraint firstItem="kMO-1A-1TC" firstAttribute="trailing" secondItem="RTe-TD-Yaj" secondAttribute="trailingMargin" id="bqY-CO-nLM"/>
+                            <constraint firstItem="kMO-1A-1TC" firstAttribute="top" secondItem="XQ6-PW-iVR" secondAttribute="bottom" constant="10" id="crx-Zs-UEN"/>
+                            <constraint firstItem="0dM-5I-wau" firstAttribute="top" secondItem="cPi-sP-lNo" secondAttribute="bottom" id="gBL-KN-dXH"/>
+                            <constraint firstItem="cPi-sP-lNo" firstAttribute="top" secondItem="RTe-TD-Yaj" secondAttribute="top" id="nnB-Ae-I21"/>
+                            <constraint firstItem="cPi-sP-lNo" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leading" id="p5c-0O-DhC"/>
+                            <constraint firstAttribute="trailing" secondItem="cPi-sP-lNo" secondAttribute="trailing" id="q7B-I4-vD7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ly8-Bx-n9Q">
@@ -125,7 +133,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-Z6-6C4">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1943"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many classes did you take this semester?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-Wg-gyK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many classes did you take this semester?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-Wg-gyK">
                                                 <rect key="frame" x="8" y="-9" width="359" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="TBU-ZI-KZr"/>
@@ -467,7 +475,7 @@
                                 <rect key="frame" x="0.0" y="2021" width="375" height="79"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQS-UC-IZj">
-                                        <rect key="frame" x="198" y="23" width="108" height="33"/>
+                                        <rect key="frame" x="204" y="23" width="108" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="108" id="G0v-aP-qig"/>
                                             <constraint firstAttribute="height" constant="33" id="mC7-3L-GsO"/>
@@ -494,7 +502,7 @@
                                     <constraint firstAttribute="bottom" secondItem="3c4-WZ-9Bp" secondAttribute="bottom" constant="23" id="2t8-XM-aDS"/>
                                     <constraint firstAttribute="height" constant="79" id="Edc-bl-iRh"/>
                                     <constraint firstItem="cQS-UC-IZj" firstAttribute="top" secondItem="4N5-ue-xl5" secondAttribute="top" constant="23" id="XfZ-8s-mhs"/>
-                                    <constraint firstAttribute="trailing" secondItem="cQS-UC-IZj" secondAttribute="trailing" constant="69" id="aE4-1Y-XaG"/>
+                                    <constraint firstAttribute="trailing" secondItem="cQS-UC-IZj" secondAttribute="trailing" constant="63" id="aE4-1Y-XaG"/>
                                     <constraint firstAttribute="bottom" secondItem="cQS-UC-IZj" secondAttribute="bottom" constant="23" id="bux-PQ-Ols"/>
                                     <constraint firstItem="3c4-WZ-9Bp" firstAttribute="top" secondItem="4N5-ue-xl5" secondAttribute="top" constant="23" id="gel-S2-FaS"/>
                                     <constraint firstItem="3c4-WZ-9Bp" firstAttribute="leading" secondItem="4N5-ue-xl5" secondAttribute="leading" constant="69" id="uGB-u1-aub"/>
@@ -556,10 +564,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="About" width="737" height="323"/>
-        <image name="finalGrade" width="737" height="322"/>
-        <image name="papers" width="1024" height="682"/>
-        <image name="semesterGPA" width="737" height="323"/>
+        <image name="books3" width="1846" height="1226"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="vjJ-Ie-WIX"/>
