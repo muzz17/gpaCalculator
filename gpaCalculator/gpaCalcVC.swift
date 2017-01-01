@@ -779,6 +779,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit
             
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 2.0){
@@ -787,6 +788,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 3.0){
@@ -795,6 +797,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 4.0){
@@ -803,6 +806,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 5.0){
@@ -811,6 +815,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 6.0){
@@ -819,6 +824,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 7.0){
@@ -827,6 +833,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 8.0){
@@ -835,6 +842,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit + course8.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 9.0){
@@ -843,6 +851,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit + course8.credit + course9.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         else if (numCourses == 10.0){
@@ -851,6 +860,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             creditHoursSum = course1.credit + course2.credit + course3.credit + course4.credit + course5.credit + course6.credit + course7.credit + course8.credit + course9.credit + course10.credit
 
             finalGPA = gradePointSum / creditHoursSum
+            finalGpaFormat()
             GPA.text = "\(finalGPA)"
         }
         
@@ -858,6 +868,11 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             GPA.text = "0.00"
         }
         
+    }
+    
+    func finalGpaFormat() {
+        finalGPA = (finalGPA * 1000)
+        finalGPA = finalGPA.rounded() / 1000
     }
     
     
