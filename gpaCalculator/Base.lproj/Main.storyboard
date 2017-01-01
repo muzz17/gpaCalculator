@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8XA-ie-icV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zJo-CK-ayS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="GrI-Dl-0vX">
+            <objects>
+                <navigationController id="zJo-CK-ayS" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUI-wz-T5B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8XA-ie-icV" kind="relationship" relationship="rootViewController" id="JNf-fZ-NxW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqy-TP-3Ms" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2460" y="358"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="0qj-ur-IPv">
             <objects>
-                <viewController id="8XA-ie-icV" sceneMemberID="viewController">
+                <viewController title="Home" id="8XA-ie-icV" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZZY-PX-XGW"/>
                         <viewControllerLayoutGuide type="bottom" id="0dM-5I-wau"/>
@@ -25,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxW-wC-CDf">
-                                <rect key="frame" x="49" y="20" width="277" height="131"/>
+                                <rect key="frame" x="49" y="64" width="277" height="131"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="131" id="hJl-Wj-TGk"/>
                                 </constraints>
@@ -36,7 +54,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-cT-vtT">
-                                <rect key="frame" x="109" y="313" width="157" height="36"/>
+                                <rect key="frame" x="109" y="357" width="157" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <size key="titleShadowOffset" width="0.0" height="2.5"/>
                                 <state key="normal" title="Click to find GPA">
@@ -44,7 +62,7 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="DzW-3f-HTr"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6yD-GM-EG7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,15 +78,21 @@
                             <constraint firstItem="Pk4-kF-Xcp" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leading" id="z83-fH-4YY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ly8-Bx-n9Q">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="TCN-gJ-zVY"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="pushToGpaCalc" id="vjJ-Ie-WIX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coR-fT-zBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1535" y="358"/>
         </scene>
-        <!--View Controller-->
+        <!--GPA Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GPA Calculator" id="BYZ-38-t0r" customClass="ViewController" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -78,24 +102,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJn-eJ-6Xz">
-                                <rect key="frame" x="0.0" y="79" width="375" height="1943"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="1958"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-Z6-6C4">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1943"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many classes did you take this semester?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b0-Wg-gyK">
-                                                <rect key="frame" x="8" y="22" width="359" height="66"/>
+                                                <rect key="frame" x="8" y="-9" width="359" height="41"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="66" id="TBU-ZI-KZr"/>
+                                                    <constraint firstAttribute="height" constant="41" id="TBU-ZI-KZr"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-nN-6kC">
-                                                <rect key="frame" x="0.0" y="69" width="375" height="88"/>
+                                                <rect key="frame" x="0.0" y="40" width="375" height="153"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="88" id="0bx-wb-3bX"/>
+                                                    <constraint firstAttribute="height" constant="153" id="0bx-wb-3bX"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dOE-Rl-6B7"/>
@@ -103,7 +127,7 @@
                                                 </connections>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #1 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-NC-SZm">
-                                                <rect key="frame" x="8" y="179" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="208" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="fkx-OD-r2D"/>
                                                 </constraints>
@@ -112,21 +136,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Nk-nf1">
-                                                <rect key="frame" x="8" y="231" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="260" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="9rt-Kj-Nl3"/>
                                                     <constraint firstAttribute="width" constant="150" id="Oh3-Y2-Y05"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-fp-6Zn">
-                                                <rect key="frame" x="217" y="231" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="260" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="dBC-pq-8yf"/>
                                                     <constraint firstAttribute="width" constant="150" id="mZW-EU-Qdu"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #2 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6Zz-2A-TJB">
-                                                <rect key="frame" x="8" y="327" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="356" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0yw-jT-lfn"/>
                                                 </constraints>
@@ -135,21 +159,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-Z9-Tqt">
-                                                <rect key="frame" x="8" y="379" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="408" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="GQw-Po-N6d"/>
                                                     <constraint firstAttribute="height" constant="74" id="nEy-3d-6Ci"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-vL-lsK">
-                                                <rect key="frame" x="217" y="379" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="408" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="Tad-te-q4X"/>
                                                     <constraint firstAttribute="height" constant="74" id="uXM-HY-esT"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #3 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FZ2-XI-HdD">
-                                                <rect key="frame" x="8" y="475" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="504" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="cdF-cX-n9x"/>
                                                 </constraints>
@@ -158,21 +182,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="4FO-gq-Kxp">
-                                                <rect key="frame" x="8" y="527" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="556" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="9iK-cf-0F6"/>
                                                     <constraint firstAttribute="height" constant="74" id="PAu-BJ-Mt5"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8r-U4-voY">
-                                                <rect key="frame" x="217" y="527" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="556" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="IE6-Ah-xou"/>
                                                     <constraint firstAttribute="height" constant="74" id="RRz-l8-PpJ"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #4 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-Th-02a">
-                                                <rect key="frame" x="8" y="623" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="652" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="NyH-NY-iDB"/>
                                                 </constraints>
@@ -181,21 +205,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9V-6e-arC">
-                                                <rect key="frame" x="8" y="675" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="704" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="d1h-GY-Z0L"/>
                                                     <constraint firstAttribute="width" constant="150" id="tz5-Gs-mhR"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="a21-9T-DOf">
-                                                <rect key="frame" x="217" y="675" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="704" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="3ZN-jL-JE2"/>
                                                     <constraint firstAttribute="width" constant="150" id="nT9-HT-vse"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #5 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="CBT-z6-g40">
-                                                <rect key="frame" x="8" y="771" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="800" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="rgN-oV-9MR"/>
                                                 </constraints>
@@ -204,21 +228,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpP-t7-caR">
-                                                <rect key="frame" x="8" y="823" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="852" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="1Bv-ks-h4P"/>
                                                     <constraint firstAttribute="height" constant="74" id="sZk-Qd-m38"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-EQ-C2u">
-                                                <rect key="frame" x="217" y="823" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="852" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="467-RL-Pcu"/>
                                                     <constraint firstAttribute="width" constant="150" id="qo1-uL-uBa"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #6 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fi6-0m-QML">
-                                                <rect key="frame" x="8" y="919" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="948" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="odN-at-9lt"/>
                                                 </constraints>
@@ -227,14 +251,14 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwR-dO-LaI">
-                                                <rect key="frame" x="8" y="971" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="1000" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="E3R-Vb-1XC"/>
                                                     <constraint firstAttribute="width" constant="150" id="arW-gD-gUh"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #7 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6uN-EM-lJt">
-                                                <rect key="frame" x="8" y="1067" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="1096" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ifF-xz-5Y9"/>
                                                 </constraints>
@@ -243,21 +267,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-Kl-E7c">
-                                                <rect key="frame" x="8" y="1119" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="1148" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="3dN-v4-qs9"/>
                                                     <constraint firstAttribute="height" constant="74" id="RPP-iJ-Kvg"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFg-Bs-yHl">
-                                                <rect key="frame" x="217" y="1119" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="1148" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="VvE-y2-nkJ"/>
                                                     <constraint firstAttribute="height" constant="74" id="s0j-WN-cz4"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #8 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xLj-ut-SVd">
-                                                <rect key="frame" x="8" y="1215" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="1244" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="egW-Rr-JiF"/>
                                                 </constraints>
@@ -266,21 +290,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4h-dg-tVl">
-                                                <rect key="frame" x="8" y="1267" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="1296" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="67W-2k-qgz"/>
                                                     <constraint firstAttribute="height" constant="74" id="O76-ac-Tlv"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVq-RU-vhW">
-                                                <rect key="frame" x="217" y="1267" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="1296" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="8Lv-YA-Y5v"/>
                                                     <constraint firstAttribute="height" constant="74" id="mbm-my-0xc"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #9 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-BV-2KS">
-                                                <rect key="frame" x="8" y="1363" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="1392" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="xaW-Mn-enX"/>
                                                 </constraints>
@@ -289,21 +313,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtL-yK-ZFx">
-                                                <rect key="frame" x="8" y="1415" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="1444" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="7Se-MK-1Yg"/>
                                                     <constraint firstAttribute="height" constant="74" id="UNA-Cj-cn4"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBv-Uu-0CI">
-                                                <rect key="frame" x="217" y="1415" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="1444" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="HV6-ft-9Qo"/>
                                                     <constraint firstAttribute="height" constant="74" id="ySl-8Y-ZpQ"/>
                                                 </constraints>
                                             </pickerView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class #10 Name (optional)" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RNe-c1-GCa">
-                                                <rect key="frame" x="8" y="1511" width="359" height="30"/>
+                                                <rect key="frame" x="8" y="1540" width="359" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="8XE-Lw-NRO"/>
                                                 </constraints>
@@ -312,21 +336,21 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btF-9r-b41">
-                                                <rect key="frame" x="8" y="1563" width="150" height="74"/>
+                                                <rect key="frame" x="8" y="1592" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="GMj-xi-OYe"/>
                                                     <constraint firstAttribute="height" constant="74" id="xXR-rQ-6A9"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Iq-TC-Jkt">
-                                                <rect key="frame" x="217" y="971" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="1000" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="74" id="7K4-yE-Dbx"/>
                                                     <constraint firstAttribute="width" constant="150" id="xym-Hh-IkM"/>
                                                 </constraints>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpN-ew-GYF">
-                                                <rect key="frame" x="217" y="1563" width="150" height="74"/>
+                                                <rect key="frame" x="217" y="1592" width="150" height="74"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="Mmt-j4-Vfu"/>
                                                     <constraint firstAttribute="height" constant="74" id="T1T-u6-N5V"/>
@@ -343,13 +367,12 @@
                                             <constraint firstItem="pLi-NC-SZm" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="4PV-8J-rl4"/>
                                             <constraint firstItem="a21-9T-DOf" firstAttribute="top" secondItem="A5E-Th-02a" secondAttribute="bottom" constant="22" id="4V5-XN-6xA"/>
                                             <constraint firstAttribute="trailing" secondItem="HMq-vL-lsK" secondAttribute="trailing" constant="8" id="5Sd-by-cOD"/>
-                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="69" id="5qD-5f-4h8"/>
                                             <constraint firstItem="3Iq-TC-Jkt" firstAttribute="top" secondItem="fi6-0m-QML" secondAttribute="bottom" constant="22" id="96T-mE-yKt"/>
                                             <constraint firstItem="6Zz-2A-TJB" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="9JR-7y-8Ho"/>
                                             <constraint firstItem="v9V-6e-arC" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="9Qt-8q-usJ"/>
                                             <constraint firstAttribute="trailing" secondItem="fi6-0m-QML" secondAttribute="trailing" constant="8" id="9wr-bZ-ABO"/>
                                             <constraint firstItem="qtL-yK-ZFx" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="A89-cG-Qa9"/>
-                                            <constraint firstItem="5b0-Wg-gyK" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="22" id="A8K-WK-SKI"/>
+                                            <constraint firstItem="5b0-Wg-gyK" firstAttribute="top" secondItem="k6a-Z6-6C4" secondAttribute="top" constant="-9" id="A8K-WK-SKI"/>
                                             <constraint firstItem="fi6-0m-QML" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="BKS-ER-Vbe"/>
                                             <constraint firstItem="5b0-Wg-gyK" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="Bf7-9l-nth"/>
                                             <constraint firstItem="A5E-Th-02a" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="CYf-tz-BOh"/>
@@ -378,6 +401,7 @@
                                             <constraint firstItem="Cjp-EQ-C2u" firstAttribute="top" secondItem="CBT-z6-g40" secondAttribute="bottom" constant="22" id="ZgX-Qz-Kg4"/>
                                             <constraint firstItem="V4h-dg-tVl" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="aJH-Cn-6Sb"/>
                                             <constraint firstItem="FZ2-XI-HdD" firstAttribute="leading" secondItem="k6a-Z6-6C4" secondAttribute="leading" constant="8" id="al9-Yq-Bbv"/>
+                                            <constraint firstItem="tB7-nN-6kC" firstAttribute="top" secondItem="5b0-Wg-gyK" secondAttribute="bottom" constant="8" id="bbS-wy-i4v"/>
                                             <constraint firstItem="V4h-dg-tVl" firstAttribute="top" secondItem="xLj-ut-SVd" secondAttribute="bottom" constant="22" id="cvw-av-sWk"/>
                                             <constraint firstAttribute="trailing" secondItem="6Zz-2A-TJB" secondAttribute="trailing" constant="8" id="dfs-pW-dJW"/>
                                             <constraint firstAttribute="trailing" secondItem="CBT-z6-g40" secondAttribute="trailing" constant="8" id="ePL-Hi-dZD"/>
@@ -387,7 +411,7 @@
                                             <constraint firstAttribute="trailing" secondItem="JWo-BV-2KS" secondAttribute="trailing" constant="8" id="fxW-BJ-uJB"/>
                                             <constraint firstItem="xVq-RU-vhW" firstAttribute="top" secondItem="xLj-ut-SVd" secondAttribute="bottom" constant="22" id="gkW-zx-QIb"/>
                                             <constraint firstItem="mfG-Nk-nf1" firstAttribute="top" secondItem="pLi-NC-SZm" secondAttribute="bottom" constant="22" id="hHw-5i-x8y"/>
-                                            <constraint firstItem="pLi-NC-SZm" firstAttribute="top" secondItem="tB7-nN-6kC" secondAttribute="bottom" constant="22" id="hjR-xs-dkI"/>
+                                            <constraint firstItem="pLi-NC-SZm" firstAttribute="top" secondItem="tB7-nN-6kC" secondAttribute="bottom" constant="15" id="hjR-xs-dkI"/>
                                             <constraint firstAttribute="trailing" secondItem="xVq-RU-vhW" secondAttribute="trailing" constant="8" id="iMf-Wz-ZO1"/>
                                             <constraint firstItem="4FO-gq-Kxp" firstAttribute="top" secondItem="FZ2-XI-HdD" secondAttribute="bottom" constant="22" id="iip-bv-lGZ"/>
                                             <constraint firstItem="hpP-t7-caR" firstAttribute="top" secondItem="CBT-z6-g40" secondAttribute="bottom" constant="22" id="jKn-V5-H8I"/>
@@ -421,44 +445,6 @@
                                     <constraint firstItem="k6a-Z6-6C4" firstAttribute="top" secondItem="YJn-eJ-6Xz" secondAttribute="top" id="LHp-4z-Tr6"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQM-j1-xpx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-0O-gKF">
-                                        <rect key="frame" x="94" y="35" width="187" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="NOP-nM-sUJ"/>
-                                            <constraint firstAttribute="width" constant="187" id="Y9W-UL-0nm"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqn-qw-DIY">
-                                        <rect key="frame" x="27" y="35" width="34" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="vUU-dO-zhl"/>
-                                        </constraints>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <segue destination="8XA-ie-icV" kind="popoverPresentation" popoverAnchorView="uqn-qw-DIY" id="vsZ-gj-x3I">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="9lj-0O-gKF" secondAttribute="bottom" constant="19" id="5jO-zp-XY2"/>
-                                    <constraint firstItem="uqn-qw-DIY" firstAttribute="leading" secondItem="zQM-j1-xpx" secondAttribute="leading" constant="27" id="8vp-LZ-OrN"/>
-                                    <constraint firstAttribute="height" constant="79" id="HNU-J4-rU8"/>
-                                    <constraint firstItem="uqn-qw-DIY" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="top" constant="35" id="IeU-2A-R35"/>
-                                    <constraint firstAttribute="bottom" secondItem="uqn-qw-DIY" secondAttribute="bottom" constant="19" id="MGs-7A-MiX"/>
-                                    <constraint firstAttribute="width" constant="375" id="Zd9-wI-pPZ"/>
-                                    <constraint firstItem="9lj-0O-gKF" firstAttribute="centerX" secondItem="zQM-j1-xpx" secondAttribute="centerX" id="Zi9-Vq-axf"/>
-                                    <constraint firstItem="9lj-0O-gKF" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="top" constant="35" id="cTz-S2-dRq"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4N5-ue-xl5">
                                 <rect key="frame" x="0.0" y="2021" width="375" height="79"/>
                                 <subviews>
@@ -469,7 +455,7 @@
                                             <constraint firstAttribute="height" constant="33" id="mC7-3L-GsO"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-WZ-9Bp">
@@ -485,7 +471,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="3c4-WZ-9Bp" secondAttribute="bottom" constant="23" id="2t8-XM-aDS"/>
                                     <constraint firstAttribute="height" constant="79" id="Edc-bl-iRh"/>
@@ -499,13 +485,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zQM-j1-xpx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6aP-1Q-cHR"/>
                             <constraint firstAttribute="trailing" secondItem="YJn-eJ-6Xz" secondAttribute="trailing" id="HGk-EH-fiI"/>
                             <constraint firstItem="k6a-Z6-6C4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LqD-VD-FPQ"/>
-                            <constraint firstItem="YJn-eJ-6Xz" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="bottom" id="SMh-bi-B9C"/>
-                            <constraint firstItem="zQM-j1-xpx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tw2-Tl-L9j"/>
-                            <constraint firstAttribute="trailing" secondItem="zQM-j1-xpx" secondAttribute="trailing" id="bhd-XZ-1mx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YJn-eJ-6Xz" secondAttribute="bottom" constant="78" id="dah-1R-daO"/>
+                            <constraint firstItem="YJn-eJ-6Xz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lK3-4F-GWw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4N5-ue-xl5" secondAttribute="bottom" id="q5p-Fc-4pW"/>
                             <constraint firstItem="4N5-ue-xl5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q93-w8-owV"/>
                             <constraint firstAttribute="trailing" secondItem="4N5-ue-xl5" secondAttribute="trailing" id="tw8-3Z-K2l"/>
@@ -551,10 +534,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="-57"/>
+            <point key="canvasLocation" x="-484" y="426.38680659670166"/>
         </scene>
     </scenes>
     <resources>
         <image name="books3" width="1846" height="1226"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6yD-GM-EG7"/>
+    </inferredMetricsTieBreakers>
 </document>
