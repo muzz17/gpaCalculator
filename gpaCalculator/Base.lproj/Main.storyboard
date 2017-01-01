@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8XA-ie-icV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="0qj-ur-IPv">
+            <objects>
+                <viewController id="8XA-ie-icV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZZY-PX-XGW"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dM-5I-wau"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RTe-TD-Yaj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books3" translatesAutoresizingMaskIntoConstraints="NO" id="Pk4-kF-Xcp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxW-wC-CDf">
+                                <rect key="frame" x="49" y="20" width="277" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="hJl-Wj-TGk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-cT-vtT">
+                                <rect key="frame" x="109" y="313" width="157" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <size key="titleShadowOffset" width="0.0" height="2.5"/>
+                                <state key="normal" title="Click to find GPA">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="DzW-3f-HTr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pk4-kF-Xcp" firstAttribute="top" secondItem="RTe-TD-Yaj" secondAttribute="top" id="1vd-G0-RAk"/>
+                            <constraint firstItem="zfC-cT-vtT" firstAttribute="centerX" secondItem="RTe-TD-Yaj" secondAttribute="centerX" id="Hop-oL-0Vy"/>
+                            <constraint firstItem="JxW-wC-CDf" firstAttribute="top" secondItem="ZZY-PX-XGW" secondAttribute="bottom" id="e3n-51-SgT"/>
+                            <constraint firstItem="0dM-5I-wau" firstAttribute="top" secondItem="Pk4-kF-Xcp" secondAttribute="bottom" id="kn9-Nl-Poc"/>
+                            <constraint firstItem="zfC-cT-vtT" firstAttribute="top" secondItem="JxW-wC-CDf" secondAttribute="bottom" constant="162" id="lyI-yD-tmV"/>
+                            <constraint firstAttribute="trailing" secondItem="Pk4-kF-Xcp" secondAttribute="trailing" id="rqq-lL-xN9"/>
+                            <constraint firstItem="JxW-wC-CDf" firstAttribute="centerX" secondItem="RTe-TD-Yaj" secondAttribute="centerX" id="yuo-yZ-8sY"/>
+                            <constraint firstItem="Pk4-kF-Xcp" firstAttribute="leading" secondItem="RTe-TD-Yaj" secondAttribute="leading" id="z83-fH-4YY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coR-fT-zBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1535" y="358"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -378,11 +434,26 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqn-qw-DIY">
+                                        <rect key="frame" x="27" y="35" width="34" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="vUU-dO-zhl"/>
+                                        </constraints>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="8XA-ie-icV" kind="popoverPresentation" popoverAnchorView="uqn-qw-DIY" id="vsZ-gj-x3I">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="9lj-0O-gKF" secondAttribute="bottom" constant="19" id="5jO-zp-XY2"/>
+                                    <constraint firstItem="uqn-qw-DIY" firstAttribute="leading" secondItem="zQM-j1-xpx" secondAttribute="leading" constant="27" id="8vp-LZ-OrN"/>
                                     <constraint firstAttribute="height" constant="79" id="HNU-J4-rU8"/>
+                                    <constraint firstItem="uqn-qw-DIY" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="top" constant="35" id="IeU-2A-R35"/>
+                                    <constraint firstAttribute="bottom" secondItem="uqn-qw-DIY" secondAttribute="bottom" constant="19" id="MGs-7A-MiX"/>
                                     <constraint firstAttribute="width" constant="375" id="Zd9-wI-pPZ"/>
                                     <constraint firstItem="9lj-0O-gKF" firstAttribute="centerX" secondItem="zQM-j1-xpx" secondAttribute="centerX" id="Zi9-Vq-axf"/>
                                     <constraint firstItem="9lj-0O-gKF" firstAttribute="top" secondItem="zQM-j1-xpx" secondAttribute="top" constant="35" id="cTz-S2-dRq"/>
@@ -480,7 +551,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="135.832083958021"/>
+            <point key="canvasLocation" x="63" y="-57"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="books3" width="1846" height="1226"/>
+    </resources>
 </document>
