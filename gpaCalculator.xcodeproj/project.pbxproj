@@ -56,15 +56,31 @@
 		660C14DF1E0C37A70009994A /* gpaCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				6637FCA41E19CA5000869ABA /* Custom Classes */,
+				6637FCA31E19CA3400869ABA /* View Controllers */,
 				660C14E01E0C37A70009994A /* AppDelegate.swift */,
-				660C14E21E0C37A70009994A /* gpaCalcVC.swift */,
 				660C14E41E0C37A70009994A /* Main.storyboard */,
 				660C14E71E0C37A70009994A /* Assets.xcassets */,
 				660C14E91E0C37A70009994A /* LaunchScreen.storyboard */,
 				660C14EC1E0C37A70009994A /* Info.plist */,
-				667FA8961E16F04900A3AEAA /* CourseObject.swift */,
 			);
 			path = gpaCalculator;
+			sourceTree = "<group>";
+		};
+		6637FCA31E19CA3400869ABA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				660C14E21E0C37A70009994A /* gpaCalcVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6637FCA41E19CA5000869ABA /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				667FA8961E16F04900A3AEAA /* CourseObject.swift */,
+			);
+			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
