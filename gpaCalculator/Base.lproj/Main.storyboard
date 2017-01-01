@@ -112,7 +112,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="41" id="TBU-ZI-KZr"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -132,7 +132,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="fkx-OD-r2D"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-Nk-nf1">
@@ -155,7 +155,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="0yw-jT-lfn"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAn-Z9-Tqt">
@@ -178,7 +178,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="cdF-cX-n9x"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="4FO-gq-Kxp">
@@ -201,7 +201,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="NyH-NY-iDB"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9V-6e-arC">
@@ -224,7 +224,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="rgN-oV-9MR"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpP-t7-caR">
@@ -247,7 +247,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="odN-at-9lt"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwR-dO-LaI">
@@ -263,7 +263,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="ifF-xz-5Y9"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-Kl-E7c">
@@ -286,7 +286,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="egW-Rr-JiF"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4h-dg-tVl">
@@ -309,7 +309,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="xaW-Mn-enX"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtL-yK-ZFx">
@@ -332,7 +332,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="8XE-Lw-NRO"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btF-9r-b41">
@@ -454,7 +454,7 @@
                                             <constraint firstAttribute="width" constant="108" id="G0v-aP-qig"/>
                                             <constraint firstAttribute="height" constant="33" id="mC7-3L-GsO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -464,7 +464,7 @@
                                             <constraint firstAttribute="height" constant="33" id="1h9-2H-goZ"/>
                                             <constraint firstAttribute="width" constant="108" id="IAJ-se-qNN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Calculate"/>
                                         <connections>
                                             <action selector="calcGPA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cj5-0c-3Mc"/>
@@ -541,6 +541,6 @@
         <image name="books3" width="1846" height="1226"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6yD-GM-EG7"/>
+        <segue reference="vjJ-Ie-WIX"/>
     </inferredMetricsTieBreakers>
 </document>
