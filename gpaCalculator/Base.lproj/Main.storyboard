@@ -555,6 +555,7 @@
                         <outlet property="classTwoCredits" destination="HMq-vL-lsK" id="dqa-zX-asw"/>
                         <outlet property="classTwoGrade" destination="aAn-Z9-Tqt" id="M6o-C0-CmF"/>
                         <outlet property="classTwoName" destination="6Zz-2A-TJB" id="AsQ-A4-0jP"/>
+                        <outlet property="gpaScrollView" destination="YJn-eJ-6Xz" id="9Aq-sX-dN1"/>
                         <outlet property="numClassesPicker" destination="tB7-nN-6kC" id="y7V-CA-B6c"/>
                     </connections>
                 </viewController>

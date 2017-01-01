@@ -14,6 +14,8 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
 
     @IBOutlet weak var numClassesPicker: UIPickerView!
     
+    @IBOutlet weak var gpaScrollView: UIScrollView!
+    
     @IBOutlet weak var GPA: UILabel!
     
     @IBOutlet weak var classOneName: UITextField!
@@ -77,6 +79,7 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
     var gradePointSum: Double = 0.0
     var creditHoursSum: Double = 0.0
     var finalGPA: Double = 0.0
+    var activeField: UITextField?
     
     
     
@@ -145,6 +148,8 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         self.classTenCredits.delegate = self
         self.classTenCredits.dataSource = self
         self.classTenName.delegate = self
+        
+        ///// hiding courses upon loading
 
         hideCourseOne()
         hideCourseTwo()
@@ -157,11 +162,38 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         hideCourseNine()
         hideCourseTen()
         
+        ///// keyboard Scroll Code
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         super.viewDidLoad()
+        
+        ///// dismiss keyboard code
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalcVC.dismissKeyboard)))
         
     }
+    
+    ////////// keyboard Scroll methods
+    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.gpaScrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.gpaScrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.gpaScrollView.contentInset = contentInset
+    }
+    
+    ////////// dismiss keyboard methods
     
     func dismissKeyboard() {
         classOneName.resignFirstResponder()
@@ -180,6 +212,8 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         textField.resignFirstResponder()
         return true
     }
+    
+    /////////// picker methods
     
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -657,6 +691,8 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         }
 
     }
+    
+    ////// other methods
     
     func hideCourseOne(){
         classOneName.isHidden = true
