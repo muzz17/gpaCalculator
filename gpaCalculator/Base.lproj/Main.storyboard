@@ -92,7 +92,7 @@
         <!--GPA Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="GPA Calculator" id="BYZ-38-t0r" customClass="gpaCalc" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="GPA Calculator" id="BYZ-38-t0r" customClass="gpaCalcVC" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

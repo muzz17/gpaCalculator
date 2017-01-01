@@ -8,7 +8,7 @@
 
 import UIKit
 
-class gpaCalc: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // outlets
 
@@ -159,7 +159,7 @@ class gpaCalc: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, U
         
         super.viewDidLoad()
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalc.dismissKeyboard)))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalcVC.dismissKeyboard)))
         
     }
     

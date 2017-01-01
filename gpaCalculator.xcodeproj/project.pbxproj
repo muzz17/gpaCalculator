@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		660C14E11E0C37A70009994A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660C14E01E0C37A70009994A /* AppDelegate.swift */; };
-		660C14E31E0C37A70009994A /* gpaCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660C14E21E0C37A70009994A /* gpaCalc.swift */; };
+		660C14E31E0C37A70009994A /* gpaCalcVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660C14E21E0C37A70009994A /* gpaCalcVC.swift */; };
 		660C14E61E0C37A70009994A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660C14E41E0C37A70009994A /* Main.storyboard */; };
 		660C14E81E0C37A70009994A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660C14E71E0C37A70009994A /* Assets.xcassets */; };
 		660C14EB1E0C37A70009994A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660C14E91E0C37A70009994A /* LaunchScreen.storyboard */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		660C14DD1E0C37A70009994A /* gpaCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660C14E01E0C37A70009994A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		660C14E21E0C37A70009994A /* gpaCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpaCalc.swift; sourceTree = "<group>"; };
+		660C14E21E0C37A70009994A /* gpaCalcVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpaCalcVC.swift; sourceTree = "<group>"; };
 		660C14E51E0C37A70009994A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		660C14E71E0C37A70009994A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660C14EA1E0C37A70009994A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				660C14E01E0C37A70009994A /* AppDelegate.swift */,
-				660C14E21E0C37A70009994A /* gpaCalc.swift */,
+				660C14E21E0C37A70009994A /* gpaCalcVC.swift */,
 				660C14E41E0C37A70009994A /* Main.storyboard */,
 				660C14E71E0C37A70009994A /* Assets.xcassets */,
 				660C14E91E0C37A70009994A /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				660C14E31E0C37A70009994A /* gpaCalc.swift in Sources */,
+				660C14E31E0C37A70009994A /* gpaCalcVC.swift in Sources */,
 				667FA8971E16F04900A3AEAA /* CourseObject.swift in Sources */,
 				660C14E11E0C37A70009994A /* AppDelegate.swift in Sources */,
 			);
