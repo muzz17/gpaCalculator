@@ -134,18 +134,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="LQW-Sh-BBN">
-                                <rect key="frame" x="8" y="64" width="359" height="133"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="LQW-Sh-BBN">
+                                <rect key="frame" x="16" y="64" width="343" height="133"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="YVI-Yr-5nj"/>
                                 </constraints>
-                                <string key="text">This calculator can calculate what grade you need to get on your final exam or final project/assignment in a class in order to get a target grade in the class.</string>
+                                <string key="text">This calculator can tell you what grade you need to get on your final exam or final assignment in order to get a certain grade in the class.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you know your current grade in the class?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="jei-Ea-svi">
-                                <rect key="frame" x="8" y="215" width="359" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you know your current grade in the class?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="jei-Ea-svi">
+                                <rect key="frame" x="16" y="215" width="343" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="bpS-TP-bpM"/>
                                 </constraints>
@@ -181,12 +181,12 @@
                             <constraint firstItem="LQW-Sh-BBN" firstAttribute="top" secondItem="Mv1-tS-xfx" secondAttribute="bottom" id="7xb-cI-bIQ"/>
                             <constraint firstItem="bfC-vh-qJg" firstAttribute="centerX" secondItem="03j-E1-fpi" secondAttribute="centerX" id="8D0-1P-SfX"/>
                             <constraint firstItem="jei-Ea-svi" firstAttribute="top" secondItem="LQW-Sh-BBN" secondAttribute="bottom" constant="18" id="Azi-mm-5EQ"/>
-                            <constraint firstAttribute="trailing" secondItem="LQW-Sh-BBN" secondAttribute="trailing" constant="8" id="Edm-Qq-RKn"/>
+                            <constraint firstAttribute="trailing" secondItem="LQW-Sh-BBN" secondAttribute="trailing" constant="16" id="Edm-Qq-RKn"/>
                             <constraint firstItem="kJz-5U-bBV" firstAttribute="top" secondItem="jei-Ea-svi" secondAttribute="bottom" constant="62" id="OnF-Hb-o4R"/>
-                            <constraint firstItem="jei-Ea-svi" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leading" constant="8" id="Zco-FX-nlx"/>
-                            <constraint firstItem="LQW-Sh-BBN" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leading" constant="8" id="b30-OK-LL5"/>
+                            <constraint firstItem="jei-Ea-svi" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leading" constant="16" id="Zco-FX-nlx"/>
+                            <constraint firstItem="LQW-Sh-BBN" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leading" constant="16" id="b30-OK-LL5"/>
                             <constraint firstItem="bfC-vh-qJg" firstAttribute="top" secondItem="kJz-5U-bBV" secondAttribute="bottom" constant="34" id="bso-dn-DX5"/>
-                            <constraint firstAttribute="trailing" secondItem="jei-Ea-svi" secondAttribute="trailing" constant="8" id="nzz-zM-IfU"/>
+                            <constraint firstAttribute="trailing" secondItem="jei-Ea-svi" secondAttribute="trailing" constant="16" id="nzz-zM-IfU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2F-zV-48k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231.5" y="460.5"/>
+            <point key="canvasLocation" x="-232.80000000000001" y="460.11994002998506"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="Chv-lc-h3q">
