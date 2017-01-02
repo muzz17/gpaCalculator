@@ -64,16 +64,16 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
     let grades = ["Grade", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E/F"]
     let credits = ["Credit Hours", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0"]
     
-    var course1 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course2 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course3 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course4 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course5 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course6 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course7 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course8 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course9 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
-    var course10 = course(gradeString: "", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course1 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course2 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course3 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course4 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course5 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course6 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course7 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course8 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course9 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
+    var course10 = course(gradeString: "X", grade: 0.0, credit: 0.0, gradePoints: 0.0)
     
     var numCourses: Double = 0.0
     var gradePointSum: Double = 0.0
@@ -521,8 +521,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
             else if (row == 1){
                 
-                gradePointSum = course1.gradePoints
-                
                 showCourseOne()
                 
                 hideCourseTwo()
@@ -537,8 +535,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
                 
             }
             else if (row == 2){
-                
-                gradePointSum = course1.gradePoints + course2.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -555,8 +551,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
             else if (row == 3){
                 
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints
-                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -571,8 +565,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
                 
             }
             else if (row == 4){
-                
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -589,8 +581,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
             else if (row == 5){
                 
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints
-                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -605,8 +595,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
                 
             }
             else if (row == 6){
-                
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -623,8 +611,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
             else if (row == 7){
                 
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints
-                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -639,8 +625,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
                 
             }
             else if (row == 8){
-                
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -657,8 +641,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             }
             else if (row == 9){
                 
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints
-                
                 showCourseOne()
                 showCourseTwo()
                 showCourseThree()
@@ -673,8 +655,6 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
                 
             }
             else {
-                
-                gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints + course10.gradePoints
                 
                 showCourseOne()
                 showCourseTwo()
@@ -817,6 +797,8 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
         }
         else if (numCourses == 2.0){
             gradePointSum = course1.gradePoints + course2.gradePoints
@@ -826,6 +808,9 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
         }
         else if (numCourses == 3.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints
@@ -835,6 +820,10 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
         }
         else if (numCourses == 4.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints
@@ -844,6 +833,11 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
         }
         else if (numCourses == 5.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints
@@ -853,6 +847,12 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
+            blankFields5()
         }
         else if (numCourses == 6.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints
@@ -862,6 +862,13 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
+            blankFields5()
+            blankFields6()
         }
         else if (numCourses == 7.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints
@@ -871,6 +878,14 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
+            blankFields5()
+            blankFields6()
+            blankFields7()
         }
         else if (numCourses == 8.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints
@@ -880,6 +895,15 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
+            blankFields5()
+            blankFields6()
+            blankFields7()
+            blankFields8()
         }
         else if (numCourses == 9.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints
@@ -889,6 +913,16 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
+            blankFields5()
+            blankFields6()
+            blankFields7()
+            blankFields8()
+            blankFields9()
         }
         else if (numCourses == 10.0){
             gradePointSum = course1.gradePoints + course2.gradePoints + course3.gradePoints + course4.gradePoints + course5.gradePoints + course6.gradePoints + course7.gradePoints + course8.gradePoints + course9.gradePoints + course10.gradePoints
@@ -898,12 +932,19 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
             finalGPA = gradePointSum / creditHoursSum
             finalGpaFormat()
             GPA.text = "\(finalGPA)"
+            
+            blankFields1()
+            blankFields2()
+            blankFields3()
+            blankFields4()
+            blankFields5()
+            blankFields6()
+            blankFields7()
+            blankFields8()
+            blankFields9()
+            blankFields10()
         }
-        
-        if (creditHoursSum == 0){
-            GPA.text = "0.00"
-        }
-        
+                
     }
     
     func finalGpaFormat() {
@@ -911,6 +952,56 @@ class gpaCalcVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,
         finalGPA = finalGPA.rounded() / 1000
     }
     
+    func blankFields1() {
+        if (course1.gradeString == "X" || course1.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields2() {
+        if (course2.gradeString == "X" || course2.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields3() {
+        if (course3.gradeString == "X" || course3.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields4() {
+        if (course4.gradeString == "X" || course4.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields5() {
+        if (course5.gradeString == "X" || course5.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields6() {
+        if (course6.gradeString == "X" || course6.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields7() {
+        if (course7.gradeString == "X" || course7.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields8() {
+        if (course8.gradeString == "X" || course8.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields9() {
+        if (course9.gradeString == "X" || course9.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
+    func blankFields10() {
+        if (course10.gradeString == "X" || course10.credit == 0.0) {
+            GPA.text = "Fill all fields"
+        }
+    }
     
     }
 

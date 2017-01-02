@@ -12,7 +12,7 @@ class course {
     
     // private variables
     
-    fileprivate var _gradeString: String = ""
+    fileprivate var _gradeString: String = "X"
     fileprivate var _grade: Double = 0.0
     fileprivate var _credit: Double = 0.0
     fileprivate var _gradePoints: Double = 0.0
@@ -101,7 +101,7 @@ class course {
         }
         else {
             grade = 0.0
-            // gradeString = "X"
+            gradeString = "X"
         }
     }
     
