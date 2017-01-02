@@ -293,10 +293,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiK-Y0-fxT">
-                                <rect key="frame" x="16" y="546" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiK-Y0-fxT">
+                                <rect key="frame" x="16" y="466" width="343" height="101"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="HkM-EH-RKG"/>
+                                    <constraint firstAttribute="height" constant="101" id="43d-ht-vmW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -310,7 +310,7 @@
                                 </constraints>
                                 <state key="normal" title="Calculate"/>
                                 <connections>
-                                    <action selector="calcGradeNeeded:" destination="zCD-eQ-7ZC" eventType="touchUpInside" id="bTe-68-FC1"/>
+                                    <action selector="gradeNeeded:" destination="zCD-eQ-7ZC" eventType="touchUpInside" id="1d6-c3-51L"/>
                                 </connections>
                             </button>
                         </subviews>

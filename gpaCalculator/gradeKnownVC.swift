@@ -24,6 +24,8 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
     var currentGradeNum: Double?
     var finalWeightNum: Double?
     var targetGradeNum: Double?
+    var otherWeights: Double!
+    var finalAnswer: Double?
 
     
     override func viewDidLoad() {
@@ -55,9 +57,25 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
 
     ////// other methods
     
-    @IBAction func calcGradeNeeded(_ sender: Any) {
+    func calculateGradeNeeded() {
+        otherWeights = (100 - finalWeightNum!)/100
+        finalAnswer = (targetGradeNum! - (currentGradeNum! * otherWeights)) / (finalWeightNum! / 100)
+    }
+    
+    @IBAction func gradeNeeded(_ sender: Any) {
         dismissKeyboard()
         
+        if (currentGrade == nil || finalWeight == nil || targetGrade == nil) {
+            gradeNeeded.text = "Please fill out all fields"
+        }
+        else {
+            currentGradeNum = Double(currentGrade.text!)
+            finalWeightNum = Double(finalWeight.text!)
+            targetGradeNum = Double(targetGrade.text!)
+            calculateGradeNeeded()
+            gradeNeeded.text = "You need " + "\(finalAnswer!)" + "% on the final to get a " + targetGrade.text! + "% in the class"
+        }
+
     }
     
     
