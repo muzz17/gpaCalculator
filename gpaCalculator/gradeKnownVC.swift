@@ -30,6 +30,8 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
+        gradeNeeded.text = ""
+        
         super.viewDidLoad()
         
         currentGrade.keyboardType = UIKeyboardType.decimalPad
@@ -65,7 +67,7 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
     @IBAction func gradeNeeded(_ sender: Any) {
         dismissKeyboard()
         
-        if (currentGrade == nil || finalWeight == nil || targetGrade == nil) {
+        if (currentGrade == nil || finalWeight == nil || targetGrade == nil || currentGrade.text == "" || finalWeight.text == "" || targetGrade.text == "") {
             gradeNeeded.text = "Please fill out all fields"
         }
         else {
@@ -73,7 +75,7 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
             finalWeightNum = Double(finalWeight.text!)
             targetGradeNum = Double(targetGrade.text!)
             calculateGradeNeeded()
-            gradeNeeded.text = "You need " + "\(finalAnswer!)" + "% on the final to get a " + targetGrade.text! + "% in the class"
+            gradeNeeded.text = "You need a " + "\(finalAnswer!)" + "% on the final to get a " + targetGrade.text! + "% in the class"
         }
 
     }
