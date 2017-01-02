@@ -50,9 +50,10 @@
                                     <constraint firstAttribute="height" constant="55" id="cT0-2P-Fpx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <size key="titleShadowOffset" width="0.0" height="1.5"/>
                                 <state key="normal" title="What grade do I need to get on my final?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="titleLabel.adjustsFontSizeToFitWidth" value="YES"/>
@@ -68,9 +69,10 @@
                                     <constraint firstAttribute="height" constant="55" id="olU-E7-hdU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <size key="titleShadowOffset" width="0.0" height="1.5"/>
                                 <state key="normal" title="What is my semester GPA?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="6yD-GM-EG7"/>
@@ -83,9 +85,10 @@
                                     <constraint firstAttribute="height" constant="55" id="FcS-xn-09Q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <size key="titleShadowOffset" width="0.0" height="0.5"/>
+                                <size key="titleShadowOffset" width="0.0" height="1.5"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
