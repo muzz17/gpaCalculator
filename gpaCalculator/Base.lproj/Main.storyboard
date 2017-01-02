@@ -197,7 +197,7 @@
         <!--Calculate-->
         <scene sceneID="Chv-lc-h3q">
             <objects>
-                <viewController title="Calculate" id="zCD-eQ-7ZC" sceneMemberID="viewController">
+                <viewController title="Calculate" id="zCD-eQ-7ZC" customClass="gradeKnownVC" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ayz-DZ-0V9"/>
                         <viewControllerLayoutGuide type="bottom" id="vCl-eO-mZi"/>
@@ -293,6 +293,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiK-Y0-fxT">
+                                <rect key="frame" x="16" y="546" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="HkM-EH-RKG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="228-G5-m2e">
+                                <rect key="frame" x="139" y="328" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="PYc-Cs-G42"/>
+                                    <constraint firstAttribute="height" constant="30" id="hE5-jq-0Tk"/>
+                                </constraints>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calcGradeNeeded:" destination="zCD-eQ-7ZC" eventType="touchUpInside" id="bTe-68-FC1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -306,23 +326,34 @@
                             <constraint firstItem="4hz-Ql-RkI" firstAttribute="trailing" secondItem="iLy-j1-vfd" secondAttribute="trailingMargin" id="Bdy-gc-rgH"/>
                             <constraint firstItem="Rho-nJ-ULO" firstAttribute="centerX" secondItem="iLy-j1-vfd" secondAttribute="centerX" id="ClW-sn-jwa"/>
                             <constraint firstItem="4hz-Ql-RkI" firstAttribute="top" secondItem="4hM-5T-XCB" secondAttribute="bottom" constant="20" id="FVO-pA-et8"/>
+                            <constraint firstItem="228-G5-m2e" firstAttribute="top" secondItem="Tp0-wy-17Q" secondAttribute="bottom" constant="20" id="J00-zE-r2I"/>
                             <constraint firstItem="uxw-al-ZN7" firstAttribute="trailing" secondItem="iLy-j1-vfd" secondAttribute="trailingMargin" id="LXO-Wt-S6k"/>
                             <constraint firstItem="uxw-al-ZN7" firstAttribute="leading" secondItem="iLy-j1-vfd" secondAttribute="leadingMargin" id="M7e-zx-pV1"/>
+                            <constraint firstItem="228-G5-m2e" firstAttribute="centerX" secondItem="iLy-j1-vfd" secondAttribute="centerX" id="P9v-7c-daJ"/>
                             <constraint firstItem="F6Q-05-P7N" firstAttribute="centerX" secondItem="iLy-j1-vfd" secondAttribute="centerX" id="R6g-Wr-ATi"/>
                             <constraint firstItem="DWY-37-Vc2" firstAttribute="top" secondItem="x6H-YY-bU5" secondAttribute="bottom" constant="8" id="TXn-Z5-IdP"/>
                             <constraint firstItem="x6H-YY-bU5" firstAttribute="leading" secondItem="iLy-j1-vfd" secondAttribute="leadingMargin" id="Vqm-lY-jpt"/>
                             <constraint firstItem="Tp0-wy-17Q" firstAttribute="top" secondItem="4hz-Ql-RkI" secondAttribute="bottom" constant="8" id="YoN-In-xId"/>
                             <constraint firstItem="4hz-Ql-RkI" firstAttribute="leading" secondItem="iLy-j1-vfd" secondAttribute="leadingMargin" id="ZO9-WG-8UK"/>
                             <constraint firstItem="uxw-al-ZN7" firstAttribute="top" secondItem="DWY-37-Vc2" secondAttribute="bottom" constant="20" id="axD-GZ-8QL"/>
+                            <constraint firstItem="oiK-Y0-fxT" firstAttribute="trailing" secondItem="iLy-j1-vfd" secondAttribute="trailingMargin" id="dZ4-IO-TMF"/>
+                            <constraint firstItem="vCl-eO-mZi" firstAttribute="top" secondItem="oiK-Y0-fxT" secondAttribute="bottom" constant="100" id="ea7-Pi-mWA"/>
                             <constraint firstItem="DWY-37-Vc2" firstAttribute="leading" secondItem="Rho-nJ-ULO" secondAttribute="trailing" constant="8" id="hUI-jq-vx9"/>
                             <constraint firstItem="x6H-YY-bU5" firstAttribute="top" secondItem="Ayz-DZ-0V9" secondAttribute="bottom" constant="33" id="kbh-12-J4r"/>
+                            <constraint firstItem="oiK-Y0-fxT" firstAttribute="leading" secondItem="iLy-j1-vfd" secondAttribute="leadingMargin" id="m8a-C3-BYD"/>
                             <constraint firstItem="F6Q-05-P7N" firstAttribute="top" secondItem="uxw-al-ZN7" secondAttribute="bottom" constant="8" id="xMt-br-65s"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentGrade" destination="Rho-nJ-ULO" id="l1t-1o-yCT"/>
+                        <outlet property="finalWeight" destination="F6Q-05-P7N" id="QW0-wp-QMi"/>
+                        <outlet property="gradeNeeded" destination="oiK-Y0-fxT" id="b2o-of-E38"/>
+                        <outlet property="targetGrade" destination="Tp0-wy-17Q" id="Ssy-M8-Y0N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqU-kr-cx7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.5" y="333.5"/>
+            <point key="canvasLocation" x="652" y="342.27886056971516"/>
         </scene>
         <!--GPA Calculator-->
         <scene sceneID="tne-QT-ifu">
