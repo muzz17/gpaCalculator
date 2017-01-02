@@ -17,7 +17,7 @@ class course {
     fileprivate var _credit: Double = 0.0
     fileprivate var _gradePoints: Double = 0.0
     
-    // get and set varables
+    // getter and setter methods
     
     var gradeString: String {
         get {
