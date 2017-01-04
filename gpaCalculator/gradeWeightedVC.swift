@@ -6,4 +6,7 @@
 //  Copyright © 2017 Muzzammil Ahmed. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class gradeWeightedVC: UIViewController, UITextFieldDelegate {
+}

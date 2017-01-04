@@ -16,6 +16,7 @@
 		66639D851E1DA25E006EDE3B /* gradeWeightedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66639D841E1DA25E006EDE3B /* gradeWeightedVC.swift */; };
 		66639D871E1DA2B3006EDE3B /* gradeUnweightedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66639D861E1DA2B3006EDE3B /* gradeUnweightedVC.swift */; };
 		667FA8971E16F04900A3AEAA /* CourseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667FA8961E16F04900A3AEAA /* CourseObject.swift */; };
+		66AB0F741E1DB8ED000D4F08 /* categoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB0F731E1DB8ED000D4F08 /* categoryObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		66639D841E1DA25E006EDE3B /* gradeWeightedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gradeWeightedVC.swift; sourceTree = "<group>"; };
 		66639D861E1DA2B3006EDE3B /* gradeUnweightedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gradeUnweightedVC.swift; sourceTree = "<group>"; };
 		667FA8961E16F04900A3AEAA /* CourseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseObject.swift; sourceTree = "<group>"; };
+		66AB0F731E1DB8ED000D4F08 /* categoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				667FA8961E16F04900A3AEAA /* CourseObject.swift */,
+				66AB0F731E1DB8ED000D4F08 /* categoryObject.swift */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				6637FCA61E19CAEA00869ABA /* gradeKnownVC.swift in Sources */,
 				66639D871E1DA2B3006EDE3B /* gradeUnweightedVC.swift in Sources */,
 				660C14E11E0C37A70009994A /* AppDelegate.swift in Sources */,
+				66AB0F741E1DB8ED000D4F08 /* categoryObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
