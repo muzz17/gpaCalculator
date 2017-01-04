@@ -62,7 +62,7 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
     func calculateGradeNeeded() {
         otherWeights = (100 - finalWeightNum!)/100
         finalAnswer = (targetGradeNum! - (currentGradeNum! * otherWeights)) / (finalWeightNum! / 100)
-        finalAnswer = (((finalAnswer! * 100).rounded()) / 100) + 0.05
+        finalAnswer = (((finalAnswer! * 100).rounded()) / 100) + 0.00
     }
     
     @IBAction func gradeNeeded(_ sender: Any) {
