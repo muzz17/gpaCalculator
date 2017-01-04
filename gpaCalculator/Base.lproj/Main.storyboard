@@ -153,8 +153,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If no, are the grades in your class weighted or unweighted?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="EiC-gi-Irr">
+                                <rect key="frame" x="16" y="351" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Tte-a9-SQ7"/>
+                                    <constraint firstAttribute="width" constant="343" id="mqC-hR-l6e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJz-5U-bBV">
-                                <rect key="frame" x="121" y="318" width="132" height="35"/>
+                                <rect key="frame" x="121" y="286" width="132" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="HhE-B6-6N1"/>
                                     <constraint firstAttribute="width" constant="132" id="QQ2-8H-GnG"/>
@@ -166,35 +176,49 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfC-vh-qJg">
-                                <rect key="frame" x="121" y="387" width="132" height="35"/>
+                                <rect key="frame" x="118" y="441" width="140" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ieS-3C-06H"/>
-                                    <constraint firstAttribute="width" constant="132" id="jHz-mi-WVx"/>
+                                    <constraint firstAttribute="width" constant="140" id="Flu-5R-Aeo"/>
+                                    <constraint firstAttribute="height" constant="35" id="aw5-2Q-JVR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="No"/>
+                                <state key="normal" title="Weighted"/>
                                 <connections>
-                                    <segue destination="0aa-ZW-xzi" kind="show" id="WGI-wS-h5e"/>
+                                    <segue destination="0aa-ZW-xzi" kind="show" id="eyC-VC-pOU"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-wq-ogE">
+                                <rect key="frame" x="117" y="506" width="140" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8ZK-CU-hCP"/>
+                                    <constraint firstAttribute="width" constant="140" id="kec-gw-hTK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Unweighted"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kJz-5U-bBV" firstAttribute="centerX" secondItem="03j-E1-fpi" secondAttribute="centerX" id="4Bh-MX-bJH"/>
+                            <constraint firstItem="kJz-5U-bBV" firstAttribute="top" secondItem="jei-Ea-svi" secondAttribute="bottom" constant="30" id="5pe-hb-rgK"/>
                             <constraint firstItem="LQW-Sh-BBN" firstAttribute="top" secondItem="Mv1-tS-xfx" secondAttribute="bottom" id="7xb-cI-bIQ"/>
-                            <constraint firstItem="bfC-vh-qJg" firstAttribute="centerX" secondItem="03j-E1-fpi" secondAttribute="centerX" id="8D0-1P-SfX"/>
                             <constraint firstItem="jei-Ea-svi" firstAttribute="top" secondItem="LQW-Sh-BBN" secondAttribute="bottom" constant="18" id="Azi-mm-5EQ"/>
                             <constraint firstAttribute="trailing" secondItem="LQW-Sh-BBN" secondAttribute="trailing" constant="16" id="Edm-Qq-RKn"/>
-                            <constraint firstItem="kJz-5U-bBV" firstAttribute="top" secondItem="jei-Ea-svi" secondAttribute="bottom" constant="62" id="OnF-Hb-o4R"/>
+                            <constraint firstItem="gz5-wq-ogE" firstAttribute="centerX" secondItem="03j-E1-fpi" secondAttribute="centerX" id="Rce-dw-Wfz"/>
                             <constraint firstItem="jei-Ea-svi" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leading" constant="16" id="Zco-FX-nlx"/>
+                            <constraint firstItem="bfC-vh-qJg" firstAttribute="top" secondItem="EiC-gi-Irr" secondAttribute="bottom" constant="30" id="Zwy-uy-tsj"/>
                             <constraint firstItem="LQW-Sh-BBN" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leading" constant="16" id="b30-OK-LL5"/>
-                            <constraint firstItem="bfC-vh-qJg" firstAttribute="top" secondItem="kJz-5U-bBV" secondAttribute="bottom" constant="34" id="bso-dn-DX5"/>
+                            <constraint firstItem="EiC-gi-Irr" firstAttribute="top" secondItem="kJz-5U-bBV" secondAttribute="bottom" constant="30" id="cdV-Sa-lrh"/>
+                            <constraint firstItem="EiC-gi-Irr" firstAttribute="leading" secondItem="03j-E1-fpi" secondAttribute="leadingMargin" id="gIP-vd-ITQ"/>
+                            <constraint firstItem="EiC-gi-Irr" firstAttribute="trailing" secondItem="03j-E1-fpi" secondAttribute="trailingMargin" id="jMj-gg-Hpo"/>
                             <constraint firstAttribute="trailing" secondItem="jei-Ea-svi" secondAttribute="trailing" constant="16" id="nzz-zM-IfU"/>
+                            <constraint firstItem="bfC-vh-qJg" firstAttribute="centerX" secondItem="03j-E1-fpi" secondAttribute="centerX" id="ofd-xc-ijf"/>
+                            <constraint firstItem="gz5-wq-ogE" firstAttribute="top" secondItem="bfC-vh-qJg" secondAttribute="bottom" constant="30" id="p6V-AF-yA9"/>
                         </constraints>
                     </view>
                     <connections>
                         <segue destination="zCD-eQ-7ZC" kind="show" identifier="pushToGradeKnown" id="kd7-4W-vdJ"/>
-                        <segue destination="0aa-ZW-xzi" kind="show" identifier="pushToUnknownCalc" id="c0r-1N-hC5"/>
+                        <segue destination="0aa-ZW-xzi" kind="show" identifier="pushToWeight" id="3A1-k1-5x4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2F-zV-48k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -475,13 +499,13 @@ Received</string>
                                                     </fragment>
                                                     <fragment content="must">
                                                         <attributes>
-                                                            <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                            <font key="NSFont" size="16" name=".AppleSystemUIFontItalic"/>
                                                             <font key="NSOriginalFont" size="16" name=".AppleSystemUIFontItalic"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment>
-                                                        <string key="content"> enter the grade you received in that category and the weight that category is worth in columns two and three. Optionally, you may write the name of the category for clarity in the first column.</string>
+                                                        <string key="content"> enter the grade you received in that category and the weight that category is worth in the class. You do not need to enter information about your final grade and weight here, that will be calculated.</string>
                                                         <attributes>
                                                             <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -781,7 +805,7 @@ Received</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwU-ig-Mlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752.79999999999995" y="1092.0539730134933"/>
+            <point key="canvasLocation" x="753" y="1097"/>
         </scene>
         <!--Calculate-->
         <scene sceneID="Chv-lc-h3q">
@@ -1410,7 +1434,7 @@ Received</string>
     <inferredMetricsTieBreakers>
         <segue reference="vjJ-Ie-WIX"/>
         <segue reference="XPf-RB-f9k"/>
-        <segue reference="c0r-1N-hC5"/>
         <segue reference="kd7-4W-vdJ"/>
+        <segue reference="3A1-k1-5x4"/>
     </inferredMetricsTieBreakers>
 </document>
