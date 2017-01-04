@@ -699,12 +699,14 @@ Received</string>
                                                 <attributedString key="attributedText">
                                                     <fragment content="For each category that makes up your grade, you ">
                                                         <attributes>
+                                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="must">
                                                         <attributes>
+                                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <font key="NSFont" size="16" name=".AppleSystemUIFontItalic"/>
                                                             <font key="NSOriginalFont" size="16" name=".AppleSystemUIFontItalic"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -713,6 +715,7 @@ Received</string>
                                                     <fragment>
                                                         <string key="content"> enter the grade you received in that category and the weight that category is worth in the class. You do not need to enter information about your final grade and weight here, that will be calculated.</string>
                                                         <attributes>
+                                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
