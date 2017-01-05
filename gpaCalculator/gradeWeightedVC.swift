@@ -82,6 +82,19 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
+        self.categoryOne.delegate = self
+        self.categoryTwo.delegate = self
+        self.categoryThree.delegate = self
+        self.categoryFour.delegate = self
+        self.categoryFive.delegate = self
+        self.categorySix.delegate = self
+        self.categorySeven.delegate = self
+        self.categoryEight.delegate = self
+        self.categoryNine.delegate = self
+        self.categoryTen.delegate = self
+        self.categoryEleven.delegate = self
+        self.categoryTwelve.delegate = self
+        
         ///// keyboard Scroll Code
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -158,7 +171,7 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         targetGrade.resignFirstResponder()
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn (_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
