@@ -79,9 +79,10 @@ class category {
     
     // initializer
     
-    init(grade: String, weight: String){
+    init(grade: String, weight: String, isValid: Bool){
         self._grade = grade
         self._weight = weight
+        self._isValid = isValid
     }
     
     // functions

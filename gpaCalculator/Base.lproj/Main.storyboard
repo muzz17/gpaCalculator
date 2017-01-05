@@ -1019,6 +1019,44 @@ Received</string>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="categoryEight" destination="cbS-jW-RQn" id="v6j-yf-cXR"/>
+                        <outlet property="categoryEleven" destination="u4X-Y6-Vfx" id="oZc-8a-tMd"/>
+                        <outlet property="categoryFive" destination="r3q-2g-gMc" id="9gc-fq-O1F"/>
+                        <outlet property="categoryFour" destination="WiJ-sd-Ev0" id="mX1-Y2-bCI"/>
+                        <outlet property="categoryNine" destination="CIV-eS-Z4p" id="unT-l5-NFG"/>
+                        <outlet property="categoryOne" destination="Wmn-r9-CVw" id="PKN-Fg-1lt"/>
+                        <outlet property="categorySeven" destination="CgI-pf-8RI" id="wp8-QO-QWH"/>
+                        <outlet property="categorySix" destination="yvQ-Fp-BH9" id="hOG-Da-dEa"/>
+                        <outlet property="categoryTen" destination="6VY-Ik-geF" id="Pfm-24-Vat"/>
+                        <outlet property="categoryThree" destination="2oW-qH-U7G" id="8GA-nq-UxY"/>
+                        <outlet property="categoryTwelve" destination="JYg-Fe-VSY" id="bXN-FQ-FQZ"/>
+                        <outlet property="categoryTwo" destination="KvR-ri-swb" id="tUB-Mp-7NA"/>
+                        <outlet property="gradeEight" destination="tgV-SN-wgR" id="dZ4-qI-Dii"/>
+                        <outlet property="gradeEleven" destination="ZRd-bl-eRK" id="4fH-c5-TTP"/>
+                        <outlet property="gradeFive" destination="Kv8-3H-KfB" id="gyK-Ng-TSD"/>
+                        <outlet property="gradeFour" destination="Lis-73-VaZ" id="gD3-Sb-JW4"/>
+                        <outlet property="gradeNine" destination="SZL-o5-bBg" id="7wn-Ux-p9f"/>
+                        <outlet property="gradeOne" destination="hU5-g7-O68" id="9cI-L1-gPN"/>
+                        <outlet property="gradeSeven" destination="awb-iC-cue" id="GSm-EJ-ggh"/>
+                        <outlet property="gradeSix" destination="82x-MJ-7cq" id="v6h-zb-28e"/>
+                        <outlet property="gradeTen" destination="4Ka-Hz-v7e" id="TK0-Uh-wEM"/>
+                        <outlet property="gradeThree" destination="I7r-St-3hh" id="bcB-Wj-5vm"/>
+                        <outlet property="gradeTwelve" destination="gN5-CB-qdC" id="aUg-dw-rlU"/>
+                        <outlet property="gradeTwo" destination="e9R-1R-dkB" id="ETy-1U-YPS"/>
+                        <outlet property="weightEight" destination="mac-Iv-Epg" id="g27-DL-tG0"/>
+                        <outlet property="weightEleven" destination="A3r-TU-gDd" id="2E7-OW-TBa"/>
+                        <outlet property="weightFive" destination="VTf-ev-wzw" id="Pgh-ew-js2"/>
+                        <outlet property="weightFour" destination="tTE-rd-WsD" id="43Q-Er-eJv"/>
+                        <outlet property="weightNine" destination="ZR1-DK-MOA" id="iQG-8P-Tp4"/>
+                        <outlet property="weightOne" destination="wzQ-yT-gxQ" id="Ci8-oo-Ccj"/>
+                        <outlet property="weightSeven" destination="iGY-BL-zW9" id="wCk-t7-2gG"/>
+                        <outlet property="weightSix" destination="Ami-jY-UAa" id="XKa-yb-YpB"/>
+                        <outlet property="weightTen" destination="Y1G-CB-0MP" id="1i3-mP-1Lz"/>
+                        <outlet property="weightThree" destination="Lsn-Td-QyR" id="gdf-Wh-Msa"/>
+                        <outlet property="weightTwelve" destination="cpa-Hh-qQc" id="P9E-Yz-CKm"/>
+                        <outlet property="weightTwo" destination="fJe-wI-tpK" id="ktU-Ap-Sve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwU-ig-Mlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
