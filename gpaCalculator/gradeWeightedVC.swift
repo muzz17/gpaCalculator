@@ -12,6 +12,11 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     
     // outlets
     
+    @IBOutlet weak var weightedScrollView: UIScrollView!
+    
+    
+    @IBOutlet weak var finalMessage: UILabel!
+    
     @IBOutlet weak var categoryOne: UITextField!
     @IBOutlet weak var categoryTwo: UITextField!
     @IBOutlet weak var categoryThree: UITextField!
@@ -66,14 +71,198 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     var category11 = category(grade: "", weight: "", isValid: true)
     var category12 = category(grade: "", weight: "", isValid: true)
     
-    
+    var currentPoints: Double?
+    var finalWeight: Double?
     
     
     
     
     override func viewDidLoad() {
         
+        ///// keyboard Scroll Code
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        super.viewDidLoad()
+        
+        ///// dismiss keyboard code
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalcVC.dismissKeyboard)))
+        
     }
+    
+    ////////// keyboard Scroll methods
+    
+    func keyboardWillShow(notification:NSNotification){
+        //give room at the bottom of the scroll view, so it doesn't cover up anything the user needs to tap
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.weightedScrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        self.weightedScrollView.contentInset = contentInset
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        self.weightedScrollView.contentInset = contentInset
+    }
+    
+    ////////// dismiss keyboard methods
+    
+    func dismissKeyboard() {
+        categoryOne.resignFirstResponder()
+        categoryTwo.resignFirstResponder()
+        categoryThree.resignFirstResponder()
+        categoryFour.resignFirstResponder()
+        categoryFive.resignFirstResponder()
+        categorySix.resignFirstResponder()
+        categorySeven.resignFirstResponder()
+        categoryEight.resignFirstResponder()
+        categoryNine.resignFirstResponder()
+        categoryTen.resignFirstResponder()
+        categoryEleven.resignFirstResponder()
+        categoryTwelve.resignFirstResponder()
+        
+        gradeOne.resignFirstResponder()
+        gradeTwo.resignFirstResponder()
+        gradeThree.resignFirstResponder()
+        gradeFour.resignFirstResponder()
+        gradeFive.resignFirstResponder()
+        gradeSix.resignFirstResponder()
+        gradeSeven.resignFirstResponder()
+        gradeEight.resignFirstResponder()
+        gradeNine.resignFirstResponder()
+        gradeTen.resignFirstResponder()
+        gradeEleven.resignFirstResponder()
+        gradeTwelve.resignFirstResponder()
+        
+        weightOne.resignFirstResponder()
+        weightTwo.resignFirstResponder()
+        weightThree.resignFirstResponder()
+        weightFour.resignFirstResponder()
+        weightFive.resignFirstResponder()
+        weightSix.resignFirstResponder()
+        weightSeven.resignFirstResponder()
+        weightEight.resignFirstResponder()
+        weightNine.resignFirstResponder()
+        weightTen.resignFirstResponder()
+        weightEleven.resignFirstResponder()
+        weightTwelve.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // other methods
+    
+    
+    @IBAction func calcFinalGrade(_ sender: Any) {
+        retriveData()
+        
+        if (!category1.isValid || !category2.isValid || !category3.isValid || !category4.isValid || !category5.isValid || !category6.isValid || !category7.isValid || !category8.isValid || !category9.isValid || !category10.isValid || !category11.isValid || !category12.isValid) {
+            finalMessage.text = "Please fill all necessary fields"
+        }
+    }
+    
+    func calculateFinalGrade() {
+        currentPoints = category1.sumProduct + category2.sumProduct + category3.sumProduct + category4.sumProduct + category5.sumProduct + category6.sumProduct + category7.sumProduct + category8.sumProduct + category9.sumProduct + category10.sumProduct + category11.sumProduct + category12.sumProduct
+        
+        finalWeight = 1 - (category1.weightNum + category2.weightNum + category3.weightNum + category4.weightNum + category5.weightNum + category6.weightNum + category7.weightNum + category8.weightNum + category9.weightNum + category10.weightNum + category11.weightNum + category12.weightNum)
+        
+        
+    }
+    
+    func retriveData() {
+        category1.grade = gradeOne.text!
+        category1.weight = weightOne.text!
+        category1.gradeNum = Double(category1.grade)!
+        category1.weightNum = Double(category1.weight)!
+        category1.sumProductCalc()
+        category1.checkValid()
+        
+        category2.grade = gradeTwo.text!
+        category2.weight = weightTwo.text!
+        category2.gradeNum = Double(category2.grade)!
+        category2.weightNum = Double(category2.weight)!
+        category2.sumProductCalc()
+        category2.checkValid()
+        
+        category3.grade = gradeThree.text!
+        category3.weight = weightThree.text!
+        category3.gradeNum = Double(category3.grade)!
+        category3.weightNum = Double(category3.weight)!
+        category3.sumProductCalc()
+        category3.checkValid()
+        
+        category4.grade = gradeFour.text!
+        category4.weight = weightFour.text!
+        category4.gradeNum = Double(category4.grade)!
+        category4.weightNum = Double(category4.weight)!
+        category4.sumProductCalc()
+        category4.checkValid()
+        
+        category5.grade = gradeFive.text!
+        category5.weight = weightFive.text!
+        category5.gradeNum = Double(category5.grade)!
+        category5.weightNum = Double(category5.weight)!
+        category5.sumProductCalc()
+        category5.checkValid()
+        
+        category6.grade = gradeSix.text!
+        category6.weight = weightSix.text!
+        category6.gradeNum = Double(category6.grade)!
+        category6.weightNum = Double(category6.weight)!
+        category6.sumProductCalc()
+        category6.checkValid()
+        
+        category7.grade = gradeSeven.text!
+        category7.weight = weightSeven.text!
+        category7.gradeNum = Double(category7.grade)!
+        category7.weightNum = Double(category7.weight)!
+        category7.sumProductCalc()
+        category7.checkValid()
+        
+        category8.grade = gradeEight.text!
+        category8.weight = weightEight.text!
+        category8.gradeNum = Double(category8.grade)!
+        category8.weightNum = Double(category8.weight)!
+        category8.sumProductCalc()
+        category8.checkValid()
+        
+        category9.grade = gradeNine.text!
+        category9.weight = weightNine.text!
+        category9.gradeNum = Double(category9.grade)!
+        category9.weightNum = Double(category9.weight)!
+        category9.sumProductCalc()
+        category9.checkValid()
+        
+        category10.grade = gradeTen.text!
+        category10.weight = weightTen.text!
+        category10.gradeNum = Double(category10.grade)!
+        category10.weightNum = Double(category10.weight)!
+        category10.sumProductCalc()
+        category10.checkValid()
+        
+        category11.grade = gradeEleven.text!
+        category11.weight = weightEleven.text!
+        category11.gradeNum = Double(category11.grade)!
+        category11.weightNum = Double(category11.weight)!
+        category11.sumProductCalc()
+        category11.checkValid()
+        
+        category12.grade = gradeTwelve.text!
+        category12.weight = weightTwelve.text!
+        category12.gradeNum = Double(category12.grade)!
+        category12.weightNum = Double(category12.weight)!
+        category12.sumProductCalc()
+        category12.checkValid()
+    }
+    
     
     
     

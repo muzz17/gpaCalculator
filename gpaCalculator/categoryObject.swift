@@ -55,7 +55,7 @@ class category {
             return _weightNum
         }
         set (newWeightNum) {
-            self._weightNum = newWeightNum
+            self._weightNum = (newWeightNum / 100)
         }
     }
     
@@ -94,6 +94,10 @@ class category {
         else {
             self._isValid = true
         }
+    }
+    
+    func sumProductCalc() {
+        self._sumProduct = _gradeNum * _weightNum
     }
     
     
