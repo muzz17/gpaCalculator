@@ -14,6 +14,7 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var weightedScrollView: UIScrollView!
     
+    @IBOutlet weak var targetGrade: UITextField!
     
     @IBOutlet weak var finalMessage: UILabel!
     
@@ -73,6 +74,8 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     
     var currentPoints: Double?
     var finalWeight: Double?
+    var targetGradeNum: Double?
+    var finalAnswer: Double?
     
     
     
@@ -88,7 +91,7 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         
         ///// dismiss keyboard code
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalcVC.dismissKeyboard)))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gradeWeightedVC.dismissKeyboard)))
         
     }
     
@@ -151,6 +154,8 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         weightTen.resignFirstResponder()
         weightEleven.resignFirstResponder()
         weightTwelve.resignFirstResponder()
+        
+        targetGrade.resignFirstResponder()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -167,6 +172,9 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (!category1.isValid || !category2.isValid || !category3.isValid || !category4.isValid || !category5.isValid || !category6.isValid || !category7.isValid || !category8.isValid || !category9.isValid || !category10.isValid || !category11.isValid || !category12.isValid) {
             finalMessage.text = "Please fill all necessary fields"
         }
+        else {
+            finalMessage.text = "You need a " + "\(finalAnswer!)" + "% on the final to get a " + targetGrade.text! + "% in the class"
+        }
     }
     
     func calculateFinalGrade() {
@@ -174,6 +182,8 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         
         finalWeight = 1 - (category1.weightNum + category2.weightNum + category3.weightNum + category4.weightNum + category5.weightNum + category6.weightNum + category7.weightNum + category8.weightNum + category9.weightNum + category10.weightNum + category11.weightNum + category12.weightNum)
         
+        targetGradeNum = Double(targetGrade.text!)
+        finalAnswer = (targetGradeNum! - currentPoints!) / finalWeight!
         
     }
     

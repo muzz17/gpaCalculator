@@ -40,7 +40,7 @@ class gradeKnownVC: UIViewController, UITextFieldDelegate {
         
         ///// dismiss keyboard code
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalcVC.dismissKeyboard)))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gradeKnownVC.dismissKeyboard)))
         
     }
     

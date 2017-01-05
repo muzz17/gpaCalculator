@@ -44,7 +44,7 @@ class gradeUnweightedVC: UIViewController, UITextFieldDelegate {
         
         ///// dismiss keyboard code
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gpaCalcVC.dismissKeyboard)))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gradeUnweightedVC.dismissKeyboard)))
         
         ///// keyboard Scroll Code
         
