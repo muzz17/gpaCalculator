@@ -46,9 +46,7 @@ class category {
             return _gradeNum
         }
         set (newGradeNum) {
-            if (newGradeNum > 0.00) {
-                self._gradeNum = newGradeNum
-            }
+            self._gradeNum = newGradeNum
         }
     }
     
@@ -57,9 +55,7 @@ class category {
             return _weightNum
         }
         set (newWeightNum) {
-            if (newWeightNum > 0.00) {
-                self._weightNum = (newWeightNum / 100)
-            }
+            self._weightNum = (newWeightNum / 100)
         }
     }
     
