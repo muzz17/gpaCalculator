@@ -59,23 +59,24 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     
     // variables
     
-    var category1 = category(grade: "", weight: "", isValid: true)
-    var category2 = category(grade: "", weight: "", isValid: true)
-    var category3 = category(grade: "", weight: "", isValid: true)
-    var category4 = category(grade: "", weight: "", isValid: true)
-    var category5 = category(grade: "", weight: "", isValid: true)
-    var category6 = category(grade: "", weight: "", isValid: true)
-    var category7 = category(grade: "", weight: "", isValid: true)
-    var category8 = category(grade: "", weight: "", isValid: true)
-    var category9 = category(grade: "", weight: "", isValid: true)
-    var category10 = category(grade: "", weight: "", isValid: true)
-    var category11 = category(grade: "", weight: "", isValid: true)
-    var category12 = category(grade: "", weight: "", isValid: true)
+    var category1 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category2 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category3 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category4 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category5 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category6 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category7 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category8 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category9 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category10 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category11 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
+    var category12 = category(grade: "", weight: "", gradeNum: 0.00, weightNum: 0.00, isValid: true)
     
     var currentPoints: Double?
     var finalWeight: Double?
     var targetGradeNum: Double?
     var finalAnswer: Double?
+    var targetGradeValid: Bool?
     
     
     
@@ -182,7 +183,9 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     @IBAction func calcFinalGrade(_ sender: Any) {
         retriveData()
         
-        if (!category1.isValid || !category2.isValid || !category3.isValid || !category4.isValid || !category5.isValid || !category6.isValid || !category7.isValid || !category8.isValid || !category9.isValid || !category10.isValid || !category11.isValid || !category12.isValid) {
+        calculateFinalGrade()
+        
+        if (!category1.isValid || !category2.isValid || !category3.isValid || !category4.isValid || !category5.isValid || !category6.isValid || !category7.isValid || !category8.isValid || !category9.isValid || !category10.isValid || !category11.isValid || !category12.isValid || !targetGradeValid!) {
             finalMessage.text = "Please fill all necessary fields"
         }
         else {
@@ -191,102 +194,157 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     }
     
     func calculateFinalGrade() {
+        
         currentPoints = category1.sumProduct + category2.sumProduct + category3.sumProduct + category4.sumProduct + category5.sumProduct + category6.sumProduct + category7.sumProduct + category8.sumProduct + category9.sumProduct + category10.sumProduct + category11.sumProduct + category12.sumProduct
         
         finalWeight = 1 - (category1.weightNum + category2.weightNum + category3.weightNum + category4.weightNum + category5.weightNum + category6.weightNum + category7.weightNum + category8.weightNum + category9.weightNum + category10.weightNum + category11.weightNum + category12.weightNum)
         
-        targetGradeNum = Double(targetGrade.text!)
-        finalAnswer = (targetGradeNum! - currentPoints!) / finalWeight!
+        if (targetGrade.text == "" || targetGrade == nil){
+            targetGradeValid = false
+        }
+        else {
+            targetGradeNum = Double(targetGrade.text!)
+            finalAnswer = (targetGradeNum! - currentPoints!) / finalWeight!
+            finalAnswer = (((finalAnswer! * 100).rounded()) / 100) + 0.00
+            targetGradeValid = true
+        }
         
     }
     
     func retriveData() {
         category1.grade = gradeOne.text!
         category1.weight = weightOne.text!
-        category1.gradeNum = Double(category1.grade)!
-        category1.weightNum = Double(category1.weight)!
+        if (category1.grade != "") {
+            category1.gradeNum = Double(category1.grade)!
+        }
+        if (category1.weight != "") {
+            category1.weightNum = Double(category1.weight)!
+        }
         category1.sumProductCalc()
         category1.checkValid()
         
         category2.grade = gradeTwo.text!
         category2.weight = weightTwo.text!
-        category2.gradeNum = Double(category2.grade)!
-        category2.weightNum = Double(category2.weight)!
+        if (category2.grade != "") {
+            category2.gradeNum = Double(category2.grade)!
+        }
+        if (category2.weight != "") {
+            category2.weightNum = Double(category2.weight)!
+        }
         category2.sumProductCalc()
         category2.checkValid()
         
         category3.grade = gradeThree.text!
         category3.weight = weightThree.text!
-        category3.gradeNum = Double(category3.grade)!
-        category3.weightNum = Double(category3.weight)!
+        if (category3.grade != "") {
+            category3.gradeNum = Double(category3.grade)!
+        }
+        if (category3.weight != "") {
+            category3.weightNum = Double(category3.weight)!
+        }
         category3.sumProductCalc()
         category3.checkValid()
         
         category4.grade = gradeFour.text!
         category4.weight = weightFour.text!
-        category4.gradeNum = Double(category4.grade)!
-        category4.weightNum = Double(category4.weight)!
+        if (category4.grade != "") {
+            category4.gradeNum = Double(category4.grade)!
+        }
+        if (category4.weight != "") {
+            category4.weightNum = Double(category4.weight)!
+        }
         category4.sumProductCalc()
         category4.checkValid()
         
         category5.grade = gradeFive.text!
         category5.weight = weightFive.text!
-        category5.gradeNum = Double(category5.grade)!
-        category5.weightNum = Double(category5.weight)!
+        if (category5.grade != "") {
+            category5.gradeNum = Double(category5.grade)!
+        }
+        if (category5.weight != "") {
+            category5.weightNum = Double(category5.weight)!
+        }
         category5.sumProductCalc()
         category5.checkValid()
         
         category6.grade = gradeSix.text!
         category6.weight = weightSix.text!
-        category6.gradeNum = Double(category6.grade)!
-        category6.weightNum = Double(category6.weight)!
+        if (category6.grade != "") {
+            category6.gradeNum = Double(category6.grade)!
+        }
+        if (category6.weight != "") {
+            category6.weightNum = Double(category6.weight)!
+        }
         category6.sumProductCalc()
         category6.checkValid()
         
         category7.grade = gradeSeven.text!
         category7.weight = weightSeven.text!
-        category7.gradeNum = Double(category7.grade)!
-        category7.weightNum = Double(category7.weight)!
+        if (category7.grade != "") {
+            category7.gradeNum = Double(category7.grade)!
+        }
+        if (category7.weight != "") {
+            category7.weightNum = Double(category7.weight)!
+        }
         category7.sumProductCalc()
         category7.checkValid()
         
         category8.grade = gradeEight.text!
         category8.weight = weightEight.text!
-        category8.gradeNum = Double(category8.grade)!
-        category8.weightNum = Double(category8.weight)!
+        if (category8.grade != "") {
+            category8.gradeNum = Double(category8.grade)!
+        }
+        if (category8.weight != "") {
+            category8.weightNum = Double(category8.weight)!
+        }
         category8.sumProductCalc()
         category8.checkValid()
         
         category9.grade = gradeNine.text!
         category9.weight = weightNine.text!
-        category9.gradeNum = Double(category9.grade)!
-        category9.weightNum = Double(category9.weight)!
+        if (category9.grade != "") {
+            category9.gradeNum = Double(category9.grade)!
+        }
+        if (category9.weight != "") {
+            category9.weightNum = Double(category9.weight)!
+        }
         category9.sumProductCalc()
         category9.checkValid()
         
         category10.grade = gradeTen.text!
         category10.weight = weightTen.text!
-        category10.gradeNum = Double(category10.grade)!
-        category10.weightNum = Double(category10.weight)!
+        if (category10.grade != "") {
+            category10.gradeNum = Double(category10.grade)!
+        }
+        if (category10.weight != "") {
+            category10.weightNum = Double(category10.weight)!
+        }
         category10.sumProductCalc()
         category10.checkValid()
         
         category11.grade = gradeEleven.text!
         category11.weight = weightEleven.text!
-        category11.gradeNum = Double(category11.grade)!
-        category11.weightNum = Double(category11.weight)!
+        if (category11.grade != "") {
+            category11.gradeNum = Double(category11.grade)!
+        }
+        if (category11.weight != "") {
+            category11.weightNum = Double(category11.weight)!
+        }
         category11.sumProductCalc()
         category11.checkValid()
         
         category12.grade = gradeTwelve.text!
         category12.weight = weightTwelve.text!
-        category12.gradeNum = Double(category12.grade)!
-        category12.weightNum = Double(category12.weight)!
+        if (category12.grade != "") {
+            category12.gradeNum = Double(category12.grade)!
+        }
+        if (category12.weight != "") {
+            category12.weightNum = Double(category12.weight)!
+        }
         category12.sumProductCalc()
         category12.checkValid()
     }
-    
-    
+
     
     
     

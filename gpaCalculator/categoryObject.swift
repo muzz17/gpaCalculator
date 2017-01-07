@@ -46,7 +46,9 @@ class category {
             return _gradeNum
         }
         set (newGradeNum) {
-            self._gradeNum = newGradeNum
+            if (newGradeNum > 0.00) {
+                self._gradeNum = newGradeNum
+            }
         }
     }
     
@@ -55,7 +57,9 @@ class category {
             return _weightNum
         }
         set (newWeightNum) {
-            self._weightNum = (newWeightNum / 100)
+            if (newWeightNum > 0.00) {
+                self._weightNum = (newWeightNum / 100)
+            }
         }
     }
     
@@ -79,9 +83,11 @@ class category {
     
     // initializer
     
-    init(grade: String, weight: String, isValid: Bool){
+    init(grade: String, weight: String, gradeNum: Double, weightNum: Double, isValid: Bool){
         self._grade = grade
         self._weight = weight
+        self._gradeNum = gradeNum
+        self._weightNum = weightNum
         self._isValid = isValid
     }
     
