@@ -77,6 +77,7 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     var targetGradeNum: Double?
     var finalAnswer: Double?
     var targetGradeValid: Bool?
+    var allBlank: Bool?
     
     
     
@@ -183,12 +184,16 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
     @IBAction func calcFinalGrade(_ sender: Any) {
         retriveData()
         
-        calculateFinalGrade()
+        targetGradeCheck()
         
-        if (!category1.isValid || !category2.isValid || !category3.isValid || !category4.isValid || !category5.isValid || !category6.isValid || !category7.isValid || !category8.isValid || !category9.isValid || !category10.isValid || !category11.isValid || !category12.isValid || !targetGradeValid!) {
+        allBlankFields()
+        
+        if (!category1.isValid || !category2.isValid || !category3.isValid || !category4.isValid || !category5.isValid || !category6.isValid || !category7.isValid || !category8.isValid || !category9.isValid || !category10.isValid || !category11.isValid || !category12.isValid || !targetGradeValid! || allBlank!) {
             finalMessage.text = "Please fill all necessary fields"
         }
         else {
+            calculateFinalGrade()
+            
             finalMessage.text = "You need a " + "\(finalAnswer!)" + "% on the final to get a " + targetGrade.text! + "% in the class"
         }
     }
@@ -199,15 +204,10 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         
         finalWeight = 1 - (category1.weightNum + category2.weightNum + category3.weightNum + category4.weightNum + category5.weightNum + category6.weightNum + category7.weightNum + category8.weightNum + category9.weightNum + category10.weightNum + category11.weightNum + category12.weightNum)
         
-        if (targetGrade.text == "" || targetGrade == nil){
-            targetGradeValid = false
-        }
-        else {
             targetGradeNum = Double(targetGrade.text!)
             finalAnswer = (targetGradeNum! - currentPoints!) / finalWeight!
             finalAnswer = (((finalAnswer! * 100).rounded()) / 100) + 0.00
             targetGradeValid = true
-        }
         
     }
     
@@ -217,8 +217,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category1.grade != "") {
             category1.gradeNum = Double(category1.grade)!
         }
+        else {
+            category1.gradeNum = 0.00
+        }
+        
         if (category1.weight != "") {
             category1.weightNum = Double(category1.weight)!
+        }
+        else {
+            category1.weightNum = 0.00
         }
         category1.sumProductCalc()
         category1.checkValid()
@@ -228,8 +235,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category2.grade != "") {
             category2.gradeNum = Double(category2.grade)!
         }
+        else {
+            category2.gradeNum = 0.00
+        }
+        
         if (category2.weight != "") {
             category2.weightNum = Double(category2.weight)!
+        }
+        else {
+            category2.weightNum = 0.00
         }
         category2.sumProductCalc()
         category2.checkValid()
@@ -239,8 +253,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category3.grade != "") {
             category3.gradeNum = Double(category3.grade)!
         }
+        else {
+            category3.gradeNum = 0.00
+        }
+        
         if (category3.weight != "") {
             category3.weightNum = Double(category3.weight)!
+        }
+        else {
+            category3.weightNum = 0.00
         }
         category3.sumProductCalc()
         category3.checkValid()
@@ -250,8 +271,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category4.grade != "") {
             category4.gradeNum = Double(category4.grade)!
         }
+        else {
+            category4.gradeNum = 0.00
+        }
+        
         if (category4.weight != "") {
             category4.weightNum = Double(category4.weight)!
+        }
+        else {
+            category4.weightNum = 0.00
         }
         category4.sumProductCalc()
         category4.checkValid()
@@ -261,8 +289,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category5.grade != "") {
             category5.gradeNum = Double(category5.grade)!
         }
+        else {
+            category5.gradeNum = 0.00
+        }
+        
         if (category5.weight != "") {
             category5.weightNum = Double(category5.weight)!
+        }
+        else {
+            category5.weightNum = 0.00
         }
         category5.sumProductCalc()
         category5.checkValid()
@@ -272,8 +307,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category6.grade != "") {
             category6.gradeNum = Double(category6.grade)!
         }
+        else {
+            category6.gradeNum = 0.00
+        }
+        
         if (category6.weight != "") {
             category6.weightNum = Double(category6.weight)!
+        }
+        else {
+            category6.weightNum = 0.00
         }
         category6.sumProductCalc()
         category6.checkValid()
@@ -283,8 +325,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category7.grade != "") {
             category7.gradeNum = Double(category7.grade)!
         }
+        else {
+            category7.gradeNum = 0.00
+        }
+        
         if (category7.weight != "") {
             category7.weightNum = Double(category7.weight)!
+        }
+        else {
+            category7.weightNum = 0.00
         }
         category7.sumProductCalc()
         category7.checkValid()
@@ -294,8 +343,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category8.grade != "") {
             category8.gradeNum = Double(category8.grade)!
         }
+        else {
+            category8.gradeNum = 0.00
+        }
+        
         if (category8.weight != "") {
             category8.weightNum = Double(category8.weight)!
+        }
+        else {
+            category8.weightNum = 0.00
         }
         category8.sumProductCalc()
         category8.checkValid()
@@ -305,8 +361,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category9.grade != "") {
             category9.gradeNum = Double(category9.grade)!
         }
+        else {
+            category9.gradeNum = 0.00
+        }
+        
         if (category9.weight != "") {
             category9.weightNum = Double(category9.weight)!
+        }
+        else {
+            category9.weightNum = 0.00
         }
         category9.sumProductCalc()
         category9.checkValid()
@@ -316,8 +379,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category10.grade != "") {
             category10.gradeNum = Double(category10.grade)!
         }
+        else {
+            category10.gradeNum = 0.00
+        }
+        
         if (category10.weight != "") {
             category10.weightNum = Double(category10.weight)!
+        }
+        else {
+            category10.weightNum = 0.00
         }
         category10.sumProductCalc()
         category10.checkValid()
@@ -327,8 +397,15 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category11.grade != "") {
             category11.gradeNum = Double(category11.grade)!
         }
+        else {
+            category11.gradeNum = 0.00
+        }
+        
         if (category11.weight != "") {
             category11.weightNum = Double(category11.weight)!
+        }
+        else {
+            category11.weightNum = 0.00
         }
         category11.sumProductCalc()
         category11.checkValid()
@@ -338,14 +415,37 @@ class gradeWeightedVC: UIViewController, UITextFieldDelegate {
         if (category12.grade != "") {
             category12.gradeNum = Double(category12.grade)!
         }
+        else {
+            category12.gradeNum = 0.00
+        }
+        
         if (category12.weight != "") {
             category12.weightNum = Double(category12.weight)!
+        }
+        else {
+            category12.weightNum = 0.00
         }
         category12.sumProductCalc()
         category12.checkValid()
     }
 
+    func allBlankFields() {
+        if (category1.weight == "" && category2.weight == "" && category3.weight == "" && category4.weight == "" && category5.weight == "" && category6.weight == "" && category7.weight == "" && category8.weight == "" && category9.weight == "" && category10.weight == "" && category11.weight == "" && category12.weight == "") {
+            allBlank = true
+        }
+        else {
+            allBlank = false
+        }
+    }
     
+    func targetGradeCheck () {
+        if (targetGrade.text == "" || targetGrade == nil){
+            targetGradeValid = false
+        }
+        else {
+            targetGradeValid = true
+        }
+    }
     
     
     
