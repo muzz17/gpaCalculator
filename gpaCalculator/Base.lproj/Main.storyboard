@@ -126,10 +126,10 @@
             </objects>
             <point key="canvasLocation" x="-1535.2" y="357.57121439280365"/>
         </scene>
-        <!--View Controller-->
+        <!--AboutVC-->
         <scene sceneID="oMn-ow-GoC">
             <objects>
-                <viewController id="9xZ-5m-xk8" sceneMemberID="viewController">
+                <viewController id="9xZ-5m-xk8" customClass="aboutVC" customModule="gpaCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m7x-X7-1vz"/>
                         <viewControllerLayoutGuide type="bottom" id="ris-ad-9XQ"/>
@@ -148,6 +148,21 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLQ-hu-BCq">
+                                <rect key="frame" x="16" y="177" width="343" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gpaCell" id="ZGC-O4-LVS">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZGC-O4-LVS" id="pUh-yh-Otl">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,6 +171,9 @@
                             <constraint firstItem="mUf-wJ-ldw" firstAttribute="top" secondItem="m7x-X7-1vz" secondAttribute="bottom" constant="49" id="hCy-bo-SfB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gpaScaleTable" destination="qLQ-hu-BCq" id="GYS-BH-hxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwi-aE-36r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
