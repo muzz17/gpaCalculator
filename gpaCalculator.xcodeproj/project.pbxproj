@@ -17,6 +17,7 @@
 		66639D871E1DA2B3006EDE3B /* gradeUnweightedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66639D861E1DA2B3006EDE3B /* gradeUnweightedVC.swift */; };
 		667FA8971E16F04900A3AEAA /* CourseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667FA8961E16F04900A3AEAA /* CourseObject.swift */; };
 		66AB0F741E1DB8ED000D4F08 /* categoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB0F731E1DB8ED000D4F08 /* categoryObject.swift */; };
+		66DAB3851E26BE400054E64B /* aboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DAB3841E26BE400054E64B /* aboutVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		66639D861E1DA2B3006EDE3B /* gradeUnweightedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gradeUnweightedVC.swift; sourceTree = "<group>"; };
 		667FA8961E16F04900A3AEAA /* CourseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseObject.swift; sourceTree = "<group>"; };
 		66AB0F731E1DB8ED000D4F08 /* categoryObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = categoryObject.swift; sourceTree = "<group>"; };
+		66DAB3841E26BE400054E64B /* aboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +66,10 @@
 		660C14DF1E0C37A70009994A /* gpaCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				6637FCA41E19CA5000869ABA /* Custom Classes */,
-				6637FCA31E19CA3400869ABA /* View Controllers */,
+				66DAB3831E26BE0E0054E64B /* View */,
+				6637FCA41E19CA5000869ABA /* Model */,
+				6637FCA31E19CA3400869ABA /* Controller */,
 				660C14E01E0C37A70009994A /* AppDelegate.swift */,
-				660C14E41E0C37A70009994A /* Main.storyboard */,
 				660C14E71E0C37A70009994A /* Assets.xcassets */,
 				660C14E91E0C37A70009994A /* LaunchScreen.storyboard */,
 				660C14EC1E0C37A70009994A /* Info.plist */,
@@ -75,24 +77,33 @@
 			path = gpaCalculator;
 			sourceTree = "<group>";
 		};
-		6637FCA31E19CA3400869ABA /* View Controllers */ = {
+		6637FCA31E19CA3400869ABA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				660C14E21E0C37A70009994A /* gpaCalcVC.swift */,
 				6637FCA51E19CAEA00869ABA /* gradeKnownVC.swift */,
 				66639D841E1DA25E006EDE3B /* gradeWeightedVC.swift */,
 				66639D861E1DA2B3006EDE3B /* gradeUnweightedVC.swift */,
+				66DAB3841E26BE400054E64B /* aboutVC.swift */,
 			);
-			name = "View Controllers";
+			name = Controller;
 			sourceTree = "<group>";
 		};
-		6637FCA41E19CA5000869ABA /* Custom Classes */ = {
+		6637FCA41E19CA5000869ABA /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				667FA8961E16F04900A3AEAA /* CourseObject.swift */,
 				66AB0F731E1DB8ED000D4F08 /* categoryObject.swift */,
 			);
-			name = "Custom Classes";
+			name = Model;
+			sourceTree = "<group>";
+		};
+		66DAB3831E26BE0E0054E64B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				660C14E41E0C37A70009994A /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				667FA8971E16F04900A3AEAA /* CourseObject.swift in Sources */,
 				66639D851E1DA25E006EDE3B /* gradeWeightedVC.swift in Sources */,
 				6637FCA61E19CAEA00869ABA /* gradeKnownVC.swift in Sources */,
+				66DAB3851E26BE400054E64B /* aboutVC.swift in Sources */,
 				66639D871E1DA2B3006EDE3B /* gradeUnweightedVC.swift in Sources */,
 				660C14E11E0C37A70009994A /* AppDelegate.swift in Sources */,
 				66AB0F741E1DB8ED000D4F08 /* categoryObject.swift in Sources */,
