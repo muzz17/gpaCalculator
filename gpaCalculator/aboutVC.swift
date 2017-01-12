@@ -42,5 +42,4 @@ class aboutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     
-    
 }
