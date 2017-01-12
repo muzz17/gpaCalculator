@@ -141,7 +141,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wiq-UJ-eBK" userLabel="lowerView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nightSky2" translatesAutoresizingMaskIntoConstraints="NO" id="Tw3-Lq-0j1">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutBeach" translatesAutoresizingMaskIntoConstraints="NO" id="Tw3-Lq-0j1">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                     </imageView>
                                 </subviews>
@@ -155,12 +155,12 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator uses standard 4.0 scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-wJ-ldw">
                                 <rect key="frame" x="16" y="113" width="343" height="21"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GD3-sH-mvm"/>
                                     <constraint firstAttribute="width" constant="343" id="t5G-Yh-rnu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To report bugs, suggestions, and general comments please email muzzcoding@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zOT-AG-M9y">
@@ -169,7 +169,6 @@
                                     <constraint firstAttribute="height" constant="42" id="c5T-GG-ggT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you like the app please leave a review!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-CT-syR">
@@ -178,7 +177,6 @@
                                     <constraint firstAttribute="height" constant="21" id="g1G-jo-CVS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All images used are under CC0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="K5Y-Gj-Qvz">
@@ -187,7 +185,6 @@
                                     <constraint firstAttribute="height" constant="21" id="CHi-dA-4l6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLQ-hu-BCq">
@@ -1835,8 +1832,8 @@ Received</string>
         </scene>
     </scenes>
     <resources>
+        <image name="aboutBeach" width="370" height="627"/>
         <image name="beach1" width="433" height="626"/>
-        <image name="nightSky2" width="373" height="562"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XPf-RB-f9k"/>
