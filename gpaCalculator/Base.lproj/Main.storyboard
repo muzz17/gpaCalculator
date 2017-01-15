@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openBook" translatesAutoresizingMaskIntoConstraints="NO" id="cPi-sP-lNo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openBook3" translatesAutoresizingMaskIntoConstraints="NO" id="cPi-sP-lNo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ6-PW-iVR">
@@ -164,7 +164,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To report bugs, suggestions, and general comments please email muzzcoding@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zOT-AG-M9y">
-                                <rect key="frame" x="8" y="551" width="359" height="42"/>
+                                <rect key="frame" x="8" y="516" width="359" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="c5T-GG-ggT"/>
                                 </constraints>
@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you like the app please leave a review!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-CT-syR">
-                                <rect key="frame" x="8" y="599" width="359" height="21"/>
+                                <rect key="frame" x="8" y="564" width="359" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="g1G-jo-CVS"/>
                                 </constraints>
@@ -182,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All images used are under CC0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="K5Y-Gj-Qvz">
-                                <rect key="frame" x="8" y="626" width="359" height="21"/>
+                                <rect key="frame" x="8" y="591" width="359" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="CHi-dA-4l6"/>
                                 </constraints>
@@ -196,6 +196,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="197" id="HIG-g9-i76"/>
                                 </constraints>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="gpaCell" id="ZGC-O4-LVS">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
@@ -215,7 +216,7 @@
                             <constraint firstItem="mUf-wJ-ldw" firstAttribute="trailing" secondItem="fk1-wH-CGA" secondAttribute="trailingMargin" id="28D-Me-qPb"/>
                             <constraint firstItem="zOT-AG-M9y" firstAttribute="leading" secondItem="fk1-wH-CGA" secondAttribute="leading" constant="8" id="6N0-44-bgt"/>
                             <constraint firstAttribute="trailing" secondItem="3hc-CT-syR" secondAttribute="trailing" constant="8" id="9AA-U3-054"/>
-                            <constraint firstItem="ris-ad-9XQ" firstAttribute="top" secondItem="K5Y-Gj-Qvz" secondAttribute="bottom" constant="20" id="CMO-ML-say"/>
+                            <constraint firstItem="ris-ad-9XQ" firstAttribute="top" secondItem="K5Y-Gj-Qvz" secondAttribute="bottom" constant="55" id="CMO-ML-say"/>
                             <constraint firstItem="mUf-wJ-ldw" firstAttribute="leading" secondItem="fk1-wH-CGA" secondAttribute="leadingMargin" id="COl-eA-Naa"/>
                             <constraint firstAttribute="trailing" secondItem="K5Y-Gj-Qvz" secondAttribute="trailing" constant="8" id="ELK-OT-SWC"/>
                             <constraint firstAttribute="trailing" secondItem="zOT-AG-M9y" secondAttribute="trailing" constant="8" id="GQF-Du-JNX"/>
@@ -1838,7 +1839,7 @@ Received</string>
     </scenes>
     <resources>
         <image name="libraryShelf" width="438" height="626"/>
-        <image name="openBook" width="940" height="627"/>
+        <image name="openBook3" width="384" height="565"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XPf-RB-f9k"/>

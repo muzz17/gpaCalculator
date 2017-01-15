@@ -24,6 +24,10 @@ class aboutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         self.gpaScaleTable.delegate = self
         self.gpaScaleTable.dataSource = self
+        
+        // sets background of tableview to different color than white default
+        
+        self.gpaScaleTable.backgroundColor = UIColor.clear
     }
     
     public func tableView(_ gpaScaleTable: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +37,7 @@ class aboutVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     public func tableView(_ gpaScaleTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = gpaScaleTable.dequeueReusableCell(withIdentifier: "gpaCell", for: indexPath)
         cell.textLabel?.text = gpaScaleArray[indexPath.row]
+        
         return cell
     }
     
