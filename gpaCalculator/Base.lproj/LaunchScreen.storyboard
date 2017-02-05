@@ -21,28 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH7-1H-H7p">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="f39-yz-Sc0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="HL4-f2-TaD">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.32510240748789965" green="0.36496826793343823" blue="0.39079083136792447" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="HL4-f2-TaD" firstAttribute="top" secondItem="RH7-1H-H7p" secondAttribute="top" id="0wU-fK-oXp"/>
-                                    <constraint firstAttribute="bottom" secondItem="HL4-f2-TaD" secondAttribute="bottom" id="SoQ-n9-7Ha"/>
-                                    <constraint firstItem="HL4-f2-TaD" firstAttribute="leading" secondItem="RH7-1H-H7p" secondAttribute="leading" id="WWq-Kz-JnQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="HL4-f2-TaD" secondAttribute="trailing" id="lER-ci-Dfk"/>
-                                </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="RH7-1H-H7p" secondAttribute="bottom" id="fjS-io-3wf"/>
-                            <constraint firstItem="RH7-1H-H7p" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="n0e-eU-BBJ"/>
-                            <constraint firstAttribute="trailing" secondItem="RH7-1H-H7p" secondAttribute="trailing" id="sJj-60-Awn"/>
-                            <constraint firstItem="RH7-1H-H7p" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="tA3-Gp-obh"/>
+                            <constraint firstItem="f39-yz-Sc0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="7WW-Wk-ih2"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="f39-yz-Sc0" secondAttribute="bottom" id="PyY-xF-WoW"/>
+                            <constraint firstItem="f39-yz-Sc0" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fYL-46-eUc"/>
+                            <constraint firstAttribute="trailing" secondItem="f39-yz-Sc0" secondAttribute="trailing" id="wQb-dJ-DBQ"/>
                         </constraints>
                     </view>
                 </viewController>
