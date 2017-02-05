@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zJo-CK-ayS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zJo-CK-ayS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -153,6 +153,17 @@
                                     <constraint firstAttribute="trailing" secondItem="Tw3-Lq-0j1" secondAttribute="trailing" id="wJq-rR-lHG"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="13E-vt-snS">
+                                <rect key="frame" x="8" y="468" width="359" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="fhl-Xp-1yN"/>
+                                </constraints>
+                                <string key="text">Created by Muzzammil Ahmed
+muzzahmed.com</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA Calculator uses standard 4.0 scale" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="mUf-wJ-ldw">
                                 <rect key="frame" x="16" y="113" width="343" height="21"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -221,6 +232,7 @@
                             <constraint firstAttribute="trailing" secondItem="K5Y-Gj-Qvz" secondAttribute="trailing" constant="8" id="ELK-OT-SWC"/>
                             <constraint firstAttribute="trailing" secondItem="zOT-AG-M9y" secondAttribute="trailing" constant="8" id="GQF-Du-JNX"/>
                             <constraint firstItem="Wiq-UJ-eBK" firstAttribute="top" secondItem="m7x-X7-1vz" secondAttribute="bottom" id="Hbb-63-CMV"/>
+                            <constraint firstItem="zOT-AG-M9y" firstAttribute="top" secondItem="13E-vt-snS" secondAttribute="bottom" constant="6" id="IA5-uL-B0R"/>
                             <constraint firstItem="K5Y-Gj-Qvz" firstAttribute="top" secondItem="3hc-CT-syR" secondAttribute="bottom" constant="6" id="QQE-4P-8wV"/>
                             <constraint firstItem="3hc-CT-syR" firstAttribute="top" secondItem="zOT-AG-M9y" secondAttribute="bottom" constant="6" id="Tjj-KY-uof"/>
                             <constraint firstItem="qLQ-hu-BCq" firstAttribute="leading" secondItem="fk1-wH-CGA" secondAttribute="leadingMargin" id="UVS-hP-FvO"/>
@@ -230,8 +242,10 @@
                             <constraint firstItem="K5Y-Gj-Qvz" firstAttribute="leading" secondItem="fk1-wH-CGA" secondAttribute="leading" constant="8" id="cGw-Vt-B9Z"/>
                             <constraint firstAttribute="trailing" secondItem="Wiq-UJ-eBK" secondAttribute="trailing" id="dgi-Zu-mF3"/>
                             <constraint firstItem="mUf-wJ-ldw" firstAttribute="top" secondItem="m7x-X7-1vz" secondAttribute="bottom" constant="49" id="hCy-bo-SfB"/>
+                            <constraint firstAttribute="trailing" secondItem="13E-vt-snS" secondAttribute="trailing" constant="8" id="om9-kd-aOI"/>
                             <constraint firstItem="qLQ-hu-BCq" firstAttribute="trailing" secondItem="fk1-wH-CGA" secondAttribute="trailingMargin" id="vOG-Yg-iVh"/>
                             <constraint firstItem="qLQ-hu-BCq" firstAttribute="top" secondItem="mUf-wJ-ldw" secondAttribute="bottom" constant="20" id="wd6-lm-mW6"/>
+                            <constraint firstItem="13E-vt-snS" firstAttribute="leading" secondItem="fk1-wH-CGA" secondAttribute="leading" constant="8" id="xeL-Be-Ewn"/>
                         </constraints>
                     </view>
                     <connections>
