@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,18 +24,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH7-1H-H7p">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradeCalcIcon" translatesAutoresizingMaskIntoConstraints="NO" id="HL4-f2-TaD">
-                                        <rect key="frame" x="0.0" y="146" width="375" height="375"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="375" id="UMi-wt-5gy"/>
-                                            <constraint firstAttribute="width" constant="375" id="ra9-ow-TTC"/>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="HL4-f2-TaD">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32510240748789965" green="0.36496826793343823" blue="0.39079083136792447" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="HL4-f2-TaD" firstAttribute="centerY" secondItem="RH7-1H-H7p" secondAttribute="centerY" id="30P-Lt-fTW"/>
-                                    <constraint firstItem="HL4-f2-TaD" firstAttribute="centerX" secondItem="RH7-1H-H7p" secondAttribute="centerX" id="sJg-xo-Ep1"/>
+                                    <constraint firstItem="HL4-f2-TaD" firstAttribute="top" secondItem="RH7-1H-H7p" secondAttribute="top" id="0wU-fK-oXp"/>
+                                    <constraint firstAttribute="bottom" secondItem="HL4-f2-TaD" secondAttribute="bottom" id="SoQ-n9-7Ha"/>
+                                    <constraint firstItem="HL4-f2-TaD" firstAttribute="leading" secondItem="RH7-1H-H7p" secondAttribute="leading" id="WWq-Kz-JnQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HL4-f2-TaD" secondAttribute="trailing" id="lER-ci-Dfk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -54,6 +52,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gradeCalcIcon" width="500" height="500"/>
+        <image name="launch" width="750" height="1374"/>
     </resources>
 </document>
